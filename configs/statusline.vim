@@ -5,11 +5,11 @@ endif
 
 set noshowmode
 
-" set statusline^=%{coc#status()}%{get(b:,coc_current_function','')}
+set statusline^=%{coc#status()}%{get(b:,coc_current_function','')}
 
-"function! CocCurrentFunction()
-"	return get(b:, 'coc_current_function', '')
-"endfunction
+function! CocCurrentFunction()
+	return get(b:, 'coc_current_function', '')
+endfunction
 
 let g:lightline = {
 			\ 'colorscheme': 'wal',
