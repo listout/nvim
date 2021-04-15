@@ -5,6 +5,9 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'dylanaraps/wal.vim'
+"Plug 'wadackel/vim-dogrun'
+"Plug 'cocopon/iceberg.vim'
+Plug 'bluz71/vim-moonfly-colors'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
@@ -25,7 +28,7 @@ Plug 'SirVer/ultisnips'
 
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-pandoc/vim-pandoc-syntax', {'for': ['markdown', 'markdown.pandoc']}
-Plug 'lervag/vimtex'
+Plug 'lervag/vimtex', {'for': 'tex'}
 
 Plug 'itchyny/lightline.vim'
 

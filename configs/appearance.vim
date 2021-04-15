@@ -5,9 +5,9 @@
 set list listchars=tab:▸\ ,extends:›,precedes:‹,nbsp:·,trail:· ",eol:¬
 
 " Colorschemes
-"set termguicolors
-"set background=dark
-colorscheme wal
+set termguicolors
+set background=dark
+colorscheme moonfly
 
 " Function, identifier and comments in italic
 highlight Function cterm=italic gui=italic
