@@ -47,21 +47,9 @@ function! ReadOnly()
     return ''
 endfunction
 
-"let g:currentmode={
-			"\ 'n'  : 'NORMAL ',
-			"\ 'v'  : 'VISUAL ',
-			"\ 'V'  : 'V·Line ',
-			"\ "\<C-V>" : 'V·Block ',
-			"\ 'i'  : 'INSERT ',
-			"\ 'R'  : 'R ',
-			"\ 'Rv' : 'V·Replace ',
-			"\ 'c'  : 'Command ',
-			"\}
-
 set statusline=
 set statusline^=%{StatusDiagnostic()}
 set statusline+=\ %{toupper(g:currentmode[mode()])}
-"set statusline+=\ %f
 set statusline+=%8*\ %<%f\ %{ReadOnly()}\ %m\ %w
 set statusline+=%{&modified?'[+]':''}
 set statusline+=%=
@@ -71,22 +59,3 @@ set statusline+=\[%{&fileformat}\]
 set statusline+=\ %p%%
 set statusline+=\ %l:%c
 set statusline+=\ "
-
-"set statusline^=%{coc#status()}%{get(b:,coc_current_function','')}
-
-"function! CocCurrentFunction()
-	"return get(b:, 'coc_current_function', '')
-"endfunction
-
-
-"let g:lightline = {
-			"\ 'colorscheme': 'default',
-			"\ 'active': {
-			"\   'left': [ [ 'mode', 'paste' ],
-			"\             [ 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ] ]
-			"\ },
-			"\ 'component_function': {
-			"\   'cocstatus': 'coc#status',
-			"\   'currentfunction': 'CocCurrentFunction'
-			"\ },
-			"\ }
