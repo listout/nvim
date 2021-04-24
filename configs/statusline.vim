@@ -18,9 +18,52 @@ function! StatusDiagnostic() abort
 	return join(msgs, ' '). ' ' . get(g:, 'coc_status', '')
 endfunction
 
+let g:currentmode={
+			\ 'n'  : 'NORMAL ',
+			\ 'no' : 'N·Operator Pending ',
+			\ 'v'  : 'VISUAL ',
+			\ 'V'  : 'V·Line ',
+			\ "\<C-V>" : 'V·Block ',
+			\ 's'  : 'Select ',
+			\ 'S'  : 'S·Line ',
+			\ 'x19' : 'S·Block ',
+			\ 'i'  : 'INSERT ',
+			\ 'R'  : 'REPLACE ',
+			\ 'Rv' : 'V·Replace ',
+			\ 'c'  : 'Command ',
+			\ 'cv' : 'Vim Ex ',
+			\ 'ce' : 'Ex ',
+			\ 'r'  : 'Prompt ',
+			\ 'rm' : 'More ',
+			\ 'r?' : 'Confirm ',
+			\ '!'  : 'Shell ',
+			\ 't'  : 'Terminal '
+			\}
+
+function! ReadOnly()
+  if &readonly || !&modifiable
+    return ''
+  else
+    return ''
+endfunction
+
+"let g:currentmode={
+			"\ 'n'  : 'NORMAL ',
+			"\ 'v'  : 'VISUAL ',
+			"\ 'V'  : 'V·Line ',
+			"\ "\<C-V>" : 'V·Block ',
+			"\ 'i'  : 'INSERT ',
+			"\ 'R'  : 'R ',
+			"\ 'Rv' : 'V·Replace ',
+			"\ 'c'  : 'Command ',
+			"\}
+
 set statusline=
 set statusline^=%{StatusDiagnostic()}
-set statusline+=\ %f
+set statusline+=\ %{toupper(g:currentmode[mode()])}
+"set statusline+=\ %f
+set statusline+=%8*\ %<%f\ %{ReadOnly()}\ %m\ %w
+set statusline+=%{&modified?'[+]':''}
 set statusline+=%=
 set statusline+=\ %y
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
