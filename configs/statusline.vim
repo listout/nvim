@@ -48,9 +48,9 @@ function! ReadOnly()
 endfunction
 
 set statusline=
-set statusline^=%{StatusDiagnostic()}
 set statusline+=\ %{toupper(g:currentmode[mode()])}
-set statusline+=%8*\ %<%f\ %{ReadOnly()}\ %m\ %w
+set statusline^=%{StatusDiagnostic()}
+set statusline+=%8*\ %<%f\ %{ReadOnly()}\ %w
 set statusline+=%{&modified?'[+]':''}
 set statusline+=%=
 set statusline+=\ %y
