@@ -13,6 +13,7 @@
 		"latex",
 		"tex"
 	],
+	"clangd.semanticHighlighting": true,
 	"coc.preferences.formatOnSaveFiletypes": [
 		"java",
 		"c",
@@ -25,31 +26,6 @@
 	],
 	"diagnostic.refreshOnInsertMode": true,
 	"diagnostic.messageTarget": "float",
-	"languageserver": {
-		"ccsl": {
-			"command": "/usr/bin/ccls",
-			"filetypes": [
-				"c",
-				"cpp",
-				"objc",
-				"objcpp"
-			],
-			"rootPatterns": [
-				".ccls",
-				"compile_commands.json",
-				".git/",
-				".hg"
-			],
-			"initializationOptions": {
-				"cache": {
-					"directory": "/tmp/ccls"
-				},
-				"highlight": {
-					"lsRanges": true
-				}
-			}
-		}
-	},
 	"signature.target": "echo",
 	"session.directory": "~/.config/nvim/sessions",
 	"session.saveOnVimLeave": false,
