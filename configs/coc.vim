@@ -7,7 +7,9 @@ let g:coc_global_extensions = [
 			\ 'coc-dictionary',
 			\ 'coc-word',
 			\ 'coc-syntax',
-			\ 'coc-ultisnips'
+			\ 'coc-ultisnips',
+			\ 'coc-vimtex',
+			\ 'coc-clangd'
 			\]
 
 " Faster completion
