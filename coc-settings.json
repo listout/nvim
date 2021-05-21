@@ -26,6 +26,10 @@
 	],
 	"diagnostic.refreshOnInsertMode": true,
 	"diagnostic.messageTarget": "float",
+	"python.formatting.autopep8Args": [
+		"--aggressive",
+		"--aggressive"
+	],
 	"signature.target": "echo",
 	"session.directory": "~/.config/nvim/sessions",
 	"session.saveOnVimLeave": false,
