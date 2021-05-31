@@ -4,11 +4,7 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/plugged')
-"Plug 'dylanaraps/wal.vim'
-"Plug 'wadackel/vim-dogrun'
-"Plug 'cocopon/iceberg.vim'
 Plug 'arzg/vim-substrata'
-"Plug 'bluz71/vim-moonfly-colors'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
@@ -32,7 +28,9 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vim-pandoc/vim-pandoc-syntax', {'for': ['markdown', 'markdown.pandoc']}
 Plug 'lervag/vimtex', {'for': 'tex'}
 
-"Plug 'itchyny/lightline.vim'
+Plug 'liuchengxu/graphviz.vim'
+
+Plug 'vimwiki/vimwiki'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jackguo380/vim-lsp-cxx-highlight', { 'for': ['cpp', 'c'] }
