@@ -1,8 +1,11 @@
 let g:vimwiki_global_ext=0
 let g:vimwiki_table_mappings=0
 let g:vimwiki_table_auto_fmt=0
-let g:vimwiki_list = [{'path': '~/Documents/notes',
-			\ 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list = [{
+			\ 'path': '~/Documents/notes',
+			\ 'syntax': 'markdown', 'ext': '.md',
+			\ 'custom_wiki2html': '~/.local/bin/wiki2html.sh'
+			\ }]
 
 let g:vimwiki_ext2syntax = {'.md': 'markdown',
 			\ '.mkd': 'markdown',
@@ -26,3 +29,5 @@ augroup ft_vimwiki
 	au FileType vimwiki inoremap <silent> <buffer> <expr> <S-CR>
 				\ pumvisible() ? "\<S-CR>" : "<Esc>:VimwikiReturn 2 2<CR>"
 augroup END
+
+au filetype vimwiki silent! iunmap <buffer> <Tab>
