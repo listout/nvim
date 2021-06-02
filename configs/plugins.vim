@@ -30,8 +30,6 @@ Plug 'lervag/vimtex', {'for': 'tex'}
 
 Plug 'liuchengxu/graphviz.vim'
 
-Plug 'vimwiki/vimwiki'
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jackguo380/vim-lsp-cxx-highlight', { 'for': ['cpp', 'c'] }
 
