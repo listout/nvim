@@ -17,6 +17,5 @@ source $HOME/.config/nvim/configs/appearance.vim
 source $HOME/.config/nvim/configs/statusline.vim
 source $HOME/.config/nvim/configs/coc.vim
 source $HOME/.config/nvim/configs/snippets.vim
-source $HOME/.config/nvim/configs/floaterm.vim
 source $HOME/.config/nvim/configs/keys.vim
 source $HOME/.config/nvim/configs/fzf.vim
