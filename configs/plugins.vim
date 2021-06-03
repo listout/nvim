@@ -11,7 +11,6 @@ Plug 'preservim/nerdcommenter'
 Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown', 'markdown.pandoc'] }
 
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fugitive'
 Plug 'junegunn/vim-easy-align'
 
 Plug 'junegunn/goyo.vim', { 'for': ['markdown', 'markdown.pandoc', 'latex', 'tex'] }
