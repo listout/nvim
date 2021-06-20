@@ -2,14 +2,10 @@
 	"hover.target": "float",
 	"coc.preferences.currentFunctionSymbolAutoUpdate": true,
 	"coc.source.word.filetypes": [
-		"markdown",
-		"markdown.pandoc",
 		"latex",
 		"tex"
 	],
 	"coc.source.dictionary.filetypes": [
-		"markdown",
-		"markdown.pandoc",
 		"latex",
 		"tex"
 	],
