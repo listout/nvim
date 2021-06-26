@@ -1,5 +1,5 @@
-let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'java', 'c', 'cpp', 'php', 'sql', 'js=javascript']
-let g:pandoc#syntax#codeblocks#embeds#langs = ["php", "html", "bash=sh", "java", "c", "cpp", "python", "sql", "js=javascript"]
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'java', 'c', 'cpp', 'php', 'sql', 'js=javascript', 'pro=prolog']
+let g:pandoc#syntax#codeblocks#embeds#langs = ["php", "html", "bash=sh", "java", "c", "cpp", "python", "sql", "js=javascript", 'pro=prolog']
 
 let g:markdown_syntax_conceal = 1
 let g:markdown_minlines = 100
