@@ -19,5 +19,16 @@ highlight Conceal ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 map gf :e <cfile><CR>
 
 " Auto complete for $ in pandoc markdown
-let b:AutoPairs = extend({'$': '$'}, g:AutoPairs, 'keep')
+let g:AutoPairs = {
+			\ "`":"`",
+			\ "$":"$",
+			\ "$$$":"$$$",
+			\ "```":"```",
+			\ "(":")",
+			\ "[":"]",
+			\ "{":"}",
+			\ "( ": " )",
+			\ "[ ": " ]",
+			\ "{ ": " }",
+			\ }
 let java_ignore_javadoc=1
