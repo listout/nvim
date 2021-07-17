@@ -5,6 +5,7 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'arzg/vim-substrata'
+"Plug 'morhetz/gruvbox'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
