@@ -1,6 +1,3 @@
-" Spell checking
-set spell spelllang=en_us
-
 " Does not highlight conceal
 highlight Conceal ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 let g:vimtex_view_general_viewer = 'zathura'
@@ -9,6 +6,6 @@ let g:vimtex_view_general_viewer = 'zathura'
 set conceallevel=1
 let g:tex_conceal='abdmg'
 
-" Auto complete for $ in pandoc markdown
-let b:AutoPairs = extend({'$': '$'}, g:AutoPairs, 'keep')
-let java_ignore_javadoc=1
+" Spell checking
+set spell spelllang=en_us
+set textwidth=80
