@@ -5,6 +5,15 @@ let g:markdown_syntax_conceal = 1
 let g:markdown_minlines = 100
 
 let g:tex_flavor='latex'
+let g:vimtex_compiler_latexmk = {
+			\ 'options' : [
+				\   '-shell-escape',
+				\   '-verbose',
+				\   '-file-line-error',
+				\   '-synctex=1',
+				\   '-interaction=nonstopmode',
+				\ ],
+				\}
 
 augroup pandoc_syntax
 	au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
