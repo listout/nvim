@@ -14,6 +14,9 @@ highlight Function cterm=italic gui=italic
 highlight Indentifier cterm=italic gui=italic
 highlight Comment cterm=italic gui=italic
 
+" Cursor line
+set cursorline
+
 " Number of screenlines for command-line
 set cmdheight=2
 
