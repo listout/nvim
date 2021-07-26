@@ -3,11 +3,15 @@
 	"coc.preferences.currentFunctionSymbolAutoUpdate": true,
 	"coc.source.word.filetypes": [
 		"latex",
-		"tex"
+		"tex",
+		"markdown",
+		"markdown.pandoc"
 	],
 	"coc.source.dictionary.filetypes": [
 		"latex",
-		"tex"
+		"tex",
+		"markdown",
+		"markdown.pandoc"
 	],
 	"clangd.semanticHighlighting": true,
 	"coc.preferences.formatOnSaveFiletypes": [
