@@ -15,6 +15,7 @@ Plug 'tpope/vim-surround'
 Plug 'junegunn/vim-easy-align'
 
 Plug 'junegunn/goyo.vim', { 'for': ['markdown', 'markdown.pandoc', 'latex', 'tex'] }
+Plug 'junegunn/limelight.vim', { 'for': ['markdown', 'markdown.pandoc', 'latex', 'tex'] }
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
