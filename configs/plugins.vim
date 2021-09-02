@@ -4,7 +4,7 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/plugged')
-Plug 'arzg/vim-substrata'
+Plug 'bluz71/vim-moonfly-colors'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'

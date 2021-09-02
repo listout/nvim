@@ -1,13 +1,14 @@
 " Neovim true colors
-"let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 " Visualize Tabs and spaces
 set list listchars=tab:▸\ ,extends:›,precedes:‹,nbsp:·,trail:· ",eol:¬
 
 " Colorschemes
-"set termguicolors
+set termguicolors
 set background=dark
-colorscheme substrata
+let g:moonflyCursorColor = 1
+colorscheme moonfly
 
 " Function, identifier and comments in italic
 highlight Function cterm=italic gui=italic
