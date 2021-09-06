@@ -7,8 +7,7 @@ set list listchars=tab:▸\ ,extends:›,precedes:‹,nbsp:·,trail:· ",eol:¬
 " Colorschemes
 set termguicolors
 set background=dark
-let g:moonflyCursorColor = 1
-colorscheme moonfly
+colorscheme onedark
 
 " Function, identifier and comments in italic
 highlight Function cterm=italic gui=italic
