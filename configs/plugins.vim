@@ -4,8 +4,7 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/plugged')
-Plug 'bluz71/vim-moonfly-colors'
-Plug 'joshdick/onedark.vim'
+Plug 'nanotech/jellybeans.vim'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
