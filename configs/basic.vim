@@ -3,7 +3,7 @@ set relativenumber number
 "set number
 
 " Sign Column
-set signcolumn=yes
+"set signcolumn=yes
 
 " Enable mouse scroll
 set mouse=a
