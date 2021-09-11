@@ -24,6 +24,8 @@
 		"html",
 		"php"
 	],
+	"diagnostic.warningSign": "!!",
+	"diagnostic.enableSign": false,
 	"diagnostic.refreshOnInsertMode": true,
 	"diagnostic.messageTarget": "float",
 	"python.formatting.autopep8Args": [
