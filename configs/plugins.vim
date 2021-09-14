@@ -5,6 +5,7 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'nanotech/jellybeans.vim'
+Plug 'arzg/vim-substrata'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
