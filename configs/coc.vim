@@ -8,8 +8,7 @@ let g:coc_global_extensions = [
 			\ 'coc-word',
 			\ 'coc-syntax',
 			\ 'coc-ultisnips',
-			\ 'coc-vimtex',
-			\ 'coc-clangd'
+			\ 'coc-vimtex'
 			\]
 
 " Faster completion
