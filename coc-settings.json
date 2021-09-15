@@ -13,7 +13,6 @@
 		"markdown",
 		"markdown.pandoc"
 	],
-	"clangd.semanticHighlighting": true,
 	"coc.preferences.formatOnSaveFiletypes": [
 		"java",
 		"c",
@@ -28,10 +27,6 @@
 	"diagnostic.enableSign": false,
 	"diagnostic.refreshOnInsertMode": true,
 	"diagnostic.messageTarget": "float",
-	"python.formatting.autopep8Args": [
-		"--aggressive",
-		"--aggressive"
-	],
 	"signature.target": "echo",
 	"session.directory": "~/.config/nvim/sessions",
 	"session.saveOnVimLeave": false,
@@ -54,32 +49,5 @@
 		"markdown.pandoc": [
 			"tex"
 		]
-	},
-	"languageserver": {
-		"ccls": {
-			"command": "ccls",
-			"filetypes": [
-				"c",
-				"cc",
-				"cpp",
-				"c++",
-				"objc",
-				"objcpp"
-			],
-			"rootPatterns": [
-				".ccls",
-				"compile_commands.json",
-				".git/",
-				".hg/"
-			],
-			"initializationOptions": {
-				"cache": {
-					"directory": "/tmp/ccls"
-				},
-				"highlight": {
-					"lsRanges": true
-				}
-			}
-		}
 	}
 }
