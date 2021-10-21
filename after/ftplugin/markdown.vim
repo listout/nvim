@@ -11,6 +11,7 @@ let g:vim_markdown_anchorexpr="'<<'.v:anchor.'>>'"
 " Spell checking
 set spell spelllang=en_us
 set textwidth=80
+set colorcolumn=80
 
 " Does not highlight conceal
 highlight Conceal ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
