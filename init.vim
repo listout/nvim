@@ -41,6 +41,8 @@ let g:vimtex_compiler_latexmk = {
 				\ ],
 				\}
 
+let ch_syntax_for_h = 1
+
 augroup pandoc_syntax
 	au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 augroup END
