@@ -32,6 +32,7 @@ let g:markdown_minlines = 100
 
 let g:tex_flavor='latex'
 let g:vimtex_compiler_latexmk = {
+			\ 'executable' : 'latexmk',
 			\ 'options' : [
 				\ '-shell-escape',
 				\ '-verbose',
