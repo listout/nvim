@@ -18,27 +18,27 @@ function! StatusDiagnostic() abort
 	return join(msgs, ' '). ' ' . get(g:, 'coc_status', '')
 endfunction
 
-let g:currentmode={
-			\ 'n'  : 'NORMAL ',
-			\ 'no' : 'N·Operator Pending ',
-			\ 'v'  : 'VISUAL ',
-			\ 'V'  : 'V·Line ',
-			\ "\<C-V>" : 'V·Block ',
-			\ 's'  : 'Select ',
-			\ 'S'  : 'S·Line ',
-			\ 'x19' : 'S·Block ',
-			\ 'i'  : 'INSERT ',
-			\ 'R'  : 'REPLACE ',
-			\ 'Rv' : 'V·Replace ',
-			\ 'c'  : 'Command ',
-			\ 'cv' : 'Vim Ex ',
-			\ 'ce' : 'Ex ',
-			\ 'r'  : 'Prompt ',
-			\ 'rm' : 'More ',
-			\ 'r?' : 'Confirm ',
-			\ '!'  : 'Shell ',
-			\ 't'  : 'Terminal '
-			\}
+"let g:currentmode={
+			"\ 'n'  : 'NORMAL ',
+			"\ 'no' : 'N·Operator Pending ',
+			"\ 'v'  : 'VISUAL ',
+			"\ 'V'  : 'V·Line ',
+			"\ "\<C-V>" : 'V·Block ',
+			"\ 's'  : 'Select ',
+			"\ 'S'  : 'S·Line ',
+			"\ 'x19' : 'S·Block ',
+			"\ 'i'  : 'INSERT ',
+			"\ 'R'  : 'REPLACE ',
+			"\ 'Rv' : 'V·Replace ',
+			"\ 'c'  : 'Command ',
+			"\ 'cv' : 'Vim Ex ',
+			"\ 'ce' : 'Ex ',
+			"\ 'r'  : 'Prompt ',
+			"\ 'rm' : 'More ',
+			"\ 'r?' : 'Confirm ',
+			"\ '!'  : 'Shell ',
+			"\ 't'  : 'Terminal '
+			"\}
 
 function! ReadOnly()
   if &readonly || !&modifiable
@@ -48,14 +48,14 @@ function! ReadOnly()
 endfunction
 
 set statusline=
-set statusline+=\ %{toupper(g:currentmode[mode()])}
+"set statusline+=\ %{toupper(g:currentmode[mode()])}
 set statusline^=%{StatusDiagnostic()}
 set statusline+=%8*\ %<%f\ %{ReadOnly()}\ %w
 set statusline+=%{&modified?'[+]':''}
 set statusline+=%=
 set statusline+=\ %y
-set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
-set statusline+=\[%{&fileformat}\]
+"set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+"set statusline+=\[%{&fileformat}\]
 set statusline+=\ %p%%
 set statusline+=\ %l:%c
 set statusline+=\ "
