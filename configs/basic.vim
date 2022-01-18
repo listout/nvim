@@ -78,11 +78,11 @@ set nobackup nowritebackup
 " No swap files
 set noswapfile
 
-" Correct indentation
-set autoindent smartindent
-
 " Tab settings
-set noexpandtab smarttab tabstop=4 shiftwidth=4
+set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
+
+" Correct indentation
+set autoindent smartindent cindent
 
 " Share system clipboard
 set clipboard=unnamedplus
