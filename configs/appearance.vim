@@ -31,3 +31,5 @@ set pumheight=10
 
 " Support 256 colors
 set t_Co=256
+
+set fillchars+=diff:╱
