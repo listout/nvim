@@ -42,15 +42,13 @@ let g:vimtex_compiler_latexmk = {
 				\ ],
 				\}
 
-let ch_syntax_for_h = 1
+"let ch_syntax_for_h = 1
 
 augroup pandoc_syntax
 	au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 augroup END
 autocmd BufEnter,BufNewFile,BufFilePre,BufRead *.md :syntax sync fromstart
 
-let g:AutoPairsCenterLine = 0
-let g:AutoPairsMapSpace = 0
 
 source $HOME/.config/nvim/configs/plugins.vim
 source $HOME/.config/nvim/configs/basic.vim
@@ -60,3 +58,7 @@ source $HOME/.config/nvim/configs/coc.vim
 source $HOME/.config/nvim/configs/snippets.vim
 source $HOME/.config/nvim/configs/keys.vim
 source $HOME/.config/nvim/configs/fzf.vim
+
+let g:AutoPairsCenterLine = 0
+let g:AutoPairsMapSpace = 0
+let g:AutoPairsMapCR = 0
