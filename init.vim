@@ -49,6 +49,9 @@ augroup pandoc_syntax
 augroup END
 autocmd BufEnter,BufNewFile,BufFilePre,BufRead *.md :syntax sync fromstart
 
+let g:AutoPairsCenterLine = 0
+let g:AutoPairsMapSpace = 0
+
 source $HOME/.config/nvim/configs/plugins.vim
 source $HOME/.config/nvim/configs/basic.vim
 source $HOME/.config/nvim/configs/appearance.vim
