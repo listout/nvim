@@ -62,3 +62,5 @@ source $HOME/.config/nvim/configs/fzf.vim
 let g:AutoPairsCenterLine = 0
 let g:AutoPairsMapSpace = 0
 let g:AutoPairsMapCR = 0
+
+let g:c_syntax_for_h = 1
