@@ -8,7 +8,7 @@ set list listchars=tab:▸\ ,extends:›,precedes:‹,nbsp:·,trail:· ",eol:¬
 set termguicolors
 set background=dark
 let g:palenight_color_overrides = {
-			\    'black': { 'gui': '#1a1a24', "cterm": "0", "cterm16": "0" },
+			\    'black': { 'gui': '#1a1b26', "cterm": "0", "cterm16": "0" },
 			\}
 colorscheme palenight
 
