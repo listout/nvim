@@ -7,10 +7,8 @@ set list listchars=tab:▸\ ,extends:›,precedes:‹,nbsp:·,trail:· ",eol:¬
 " Colorschemes
 set termguicolors
 set background=dark
-let g:palenight_color_overrides = {
-			\    'black': { 'gui': '#1a1b26', "cterm": "0", "cterm16": "0" },
-			\}
-colorscheme palenight
+let g:tokyonight_style = "night"
+colorscheme tokyonight
 
 " Function, identifier and comments in italic
 highlight Function cterm=italic gui=italic
