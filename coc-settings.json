@@ -14,14 +14,11 @@
 		"markdown.pandoc"
 	],
 	"coc.preferences.formatOnSaveFiletypes": [
-		"java",
 		"c",
 		"cpp",
 		"jsonc",
-		"sql",
-		"python",
-		"html",
-		"php"
+		"json",
+		"python"
 	],
 	"diagnostic.warningSign": "!!",
 	"diagnostic.enableSign": false,
