@@ -5,10 +5,10 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set list listchars=tab:▸\ ,extends:›,precedes:‹,nbsp:·,trail:· ",eol:¬
 
 " Colorschemes
-set termguicolors
+" set termguicolors
 set background=dark
-let g:tokyonight_style = "night"
-colorscheme tokyonight
+" let g:tokyonight_style = "night"
+colorscheme substrata
 
 " Function, identifier and comments in italic
 highlight Function cterm=italic gui=italic

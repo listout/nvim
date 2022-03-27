@@ -6,6 +6,7 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'arzg/vim-substrata'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
@@ -29,6 +30,6 @@ Plug 'lervag/vimtex', {'for': 'tex'}
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive', {'for': ['cpp', 'c']}
-" Plug 'jackguo380/vim-lsp-cxx-highlight', { 'for': ['cpp', 'c'] }
+Plug 'jackguo380/vim-lsp-cxx-highlight', { 'for': ['cpp', 'c'] }
 
 call plug#end()
