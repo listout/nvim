@@ -48,7 +48,7 @@ augroup pandoc_syntax
 	au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 augroup END
 autocmd BufEnter,BufNewFile,BufFilePre,BufRead *.md :syntax sync fromstart
-
+autocmd BufEnter * :syntax sync fromstart
 
 source $HOME/.config/nvim/configs/plugins.vim
 source $HOME/.config/nvim/configs/basic.vim
