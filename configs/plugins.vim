@@ -4,9 +4,8 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/plugged')
-Plug 'drewtempelmeyer/palenight.vim'
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'arzg/vim-substrata'
+Plug 'ap/vim-css-color'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'

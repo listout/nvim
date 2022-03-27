@@ -7,7 +7,6 @@ set list listchars=tab:▸\ ,extends:›,precedes:‹,nbsp:·,trail:· ",eol:¬
 " Colorschemes
 " set termguicolors
 set background=dark
-" let g:tokyonight_style = "night"
 colorscheme substrata
 
 " Function, identifier and comments in italic
