@@ -27,8 +27,10 @@ Plug 'SirVer/ultisnips'
 Plug 'vim-pandoc/vim-pandoc-syntax', {'for': ['markdown', 'markdown.pandoc']}
 Plug 'lervag/vimtex', {'for': 'tex'}
 
+if &diff
+else
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+endif
 Plug 'tpope/vim-fugitive', {'for': ['cpp', 'c']}
-Plug 'jackguo380/vim-lsp-cxx-highlight', { 'for': ['cpp', 'c'] }
-
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
