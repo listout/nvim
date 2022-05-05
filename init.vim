@@ -31,16 +31,6 @@ let g:markdown_syntax_conceal = 1
 let g:markdown_minlines = 100
 
 let g:tex_flavor='latex'
-let g:vimtex_compiler_latexmk = {
-			\ 'executable' : 'latexmk',
-			\ 'options' : [
-				\ '-shell-escape',
-				\ '-verbose',
-				\ '-file-line-error',
-				\ '-synctex=1',
-				\ '-interaction=nonstopmode',
-				\ ],
-				\}
 
 "let ch_syntax_for_h = 1
 
@@ -89,7 +79,7 @@ require'nvim-treesitter.configs'.setup {
 		-- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
 		-- Using this option may slow down your editor, and you may see some duplicate highlights.
 		-- Instead of true it can also be a list of languages
-		additional_vim_regex_highlighting = false,
+		additional_vim_regex_highlighting = true,
 	},
 }
 EOF
