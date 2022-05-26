@@ -97,7 +97,7 @@ autocmd BufWritePre * %s/\s\+$//e
 set shell=zsh
 
 " Change the current working directory
-set autochdir
+"set autochdir
 
 " Python host
 let g:python3_host_prog='/usr/bin/python'
