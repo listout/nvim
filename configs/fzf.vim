@@ -3,3 +3,6 @@ let $FZF_DEFAULT_COMMAND =  "find * -path
 			\ -prune -o -path 'target/**' -prune -o -path
 			\'dist/**' -prune -o  -type f -print -o -type
 			\ l -print 2> /dev/null"
+
+" Shortcut for listing opened buffers
+nnoremap <silent><leader>l :Buffers<CR>
