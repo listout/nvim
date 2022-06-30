@@ -5,6 +5,7 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'shaunsingh/nord.nvim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'ap/vim-css-color'
 
 Plug 'jiangmiao/auto-pairs'
