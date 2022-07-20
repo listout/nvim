@@ -7,6 +7,11 @@ set list listchars=tab:▸\ ,extends:›,precedes:‹,nbsp:·,trail:· ",eol:¬
 " Colorschemes
 set termguicolors
 set background=dark
+"let g:tokyonight_style = "night"
+let g:nord_contrast = v:true
+let g:nord_borders = v:false
+let g:nord_disable_background = v:false
+let g:nord_italic = v:false
 colorscheme nord
 
 " Function, identifier and comments in italic
