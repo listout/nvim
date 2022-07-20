@@ -79,7 +79,7 @@ set nobackup nowritebackup
 set noswapfile
 
 " Tab settings
-set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
+set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 
 " Correct indentation
 set autoindent smartindent cindent
