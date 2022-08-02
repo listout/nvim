@@ -49,4 +49,3 @@ vim.cmd([[
 ]])
 
 map('n', '<silent><leader>l', ':Buffers<CR>')
-
