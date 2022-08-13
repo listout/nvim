@@ -8,7 +8,7 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	-- Nord color scheme
-	use 'shaunsingh/nord.nvim'
+	use 'folke/tokyonight.nvim'
 
 	-- Completion
 	use {'neoclide/coc.nvim', branch = 'release'}
