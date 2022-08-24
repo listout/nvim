@@ -29,6 +29,7 @@ opt.hlsearch = false        -- No highlight search
 opt.incsearch = true
 opt.ignorecase = true
 opt.backspace = 'indent,eol,start'
+--opt.autochdir = true
 
 -----------------------------------------------------------
 -- Tabs, indent
