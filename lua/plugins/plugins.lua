@@ -1,13 +1,40 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
+-- Automatically install packer
+local fn = vim.fn
+local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+
+if fn.empty(fn.glob(install_path)) > 0 then
+	packer_bootstrap = fn.system({
+		'git',
+		'clone',
+		'--depth',
+		'1',
+		'https://github.com/wbthomason/packer.nvim',
+		install_path
+	})
+	vim.o.runtimepath = vim.fn.stdpath('data') .. '/site/pack/*/start/*,' .. vim.o.runtimepath
+end
+
+-- Autocommand that reloads neovim whenever you save the packer_init.lua file
+vim.cmd [[
+augroup packer_user_config
+autocmd!
+autocmd BufWritePost packer_init.lua source <afile> | PackerSync
+augroup end
+]]
+
+-- Use a protected call so we don't error out on first use
+local status_ok, packer = pcall(require, 'packer')
+if not status_ok then
+	return
+end
 
 -- Only required if you have packer configured as `opt`
-local use = require('packer').use
-return require('packer').startup(function()
+return packer.startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
-	-- Nord color scheme
-	use 'arzg/vim-substrata'
+	-- Color scheme
+	use 'folke/tokyonight.nvim'
 
 	-- Completion and language server
 	use {'neovim/nvim-lspconfig'} -- Collection of configurations for built-in LSP client
@@ -48,27 +75,10 @@ return require('packer').startup(function()
 
 	-- Better per project settings
 	use { 'windwp/nvim-projectconfig' }
-	--[[
-	   [use {
-	   [    "klen/nvim-config-local",
-	   [    config = function()
-	   [        require('config-local').setup {
-	   [            -- Default configuration (optional)
-	   [            config_files = { ".vimrc.lua", ".vimrc" },  -- Config file patterns to load (lua supported)
-	   [            hashfile = vim.fn.stdpath("data") .. "/config-local", -- Where the plugin keeps files data
-	   [            autocommands_create = true,                 -- Create autocommands (VimEnter, DirectoryChanged)
-	   [            commands_create = true,                     -- Create commands (ConfigSource, ConfigEdit, ConfigTrust, ConfigIgnore)
-	   [            silent = false,                             -- Disable plugin messages (Config loaded/ignored)
-	   [            lookup_parents = true,                      -- Lookup config files in parent directories
-	   [        }
-	   [    end
-	   [}
-	   ]]
 
-	--[[ Most probably not needed anymore
-	   [use { 'honza/vim-snippets' }
-	   [use { 'SirVer/ultisnips' }
-	   ]]
-
-
+	-- Automatically set up your configuration after cloning packer.nvim
+	-- Put this at the end after all plugins
+	if packer_bootstrap then
+		require('packer').sync()
+	end
 end)
