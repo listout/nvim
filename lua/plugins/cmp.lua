@@ -1,9 +1,55 @@
 -- luasnip setup
 local luasnip = require 'luasnip'
 
+local kind_icons = {
+	Text = "",
+	Method = "",
+	Function = "",
+	Constructor = "",
+	Field = "",
+	Variable = "",
+	Class = "ﴯ",
+	Interface = "",
+	Module = "",
+	Property = "ﰠ",
+	Unit = "",
+	Value = "",
+	Enum = "",
+	Keyword = "",
+	Snippet = "",
+	Color = "",
+	File = "",
+	Reference = "",
+	Folder = "",
+	EnumMember = "",
+	Constant = "",
+	Struct = "",
+	Event = "",
+	Operator = "",
+	TypeParameter = ""
+}
+
 -- nvim-cmp setup
 local cmp = require 'cmp'
 cmp.setup {
+	formatting = {
+		format = function(entry, vim_item)
+			local label = vim_item.abbr
+			local truncated_label = vim.fn.strcharpart(label, 0, 50)
+			if truncated_label ~= label then
+				vim_item.abbr = truncated_label .. '...'
+			end
+			vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind)
+			vim_item.menu = ({
+				buffer = "[Buffer]",
+				nvim_lsp = "[LSP]",
+				luasnip = "[LuaSnip]",
+				nvim_lua = "[Lua]",
+				latex_symbols = "[LaTeX]",
+			})[entry.source.name]
+			return vim_item
+		end
+	},
 	view = {
 		entries = "custom",
 	},
