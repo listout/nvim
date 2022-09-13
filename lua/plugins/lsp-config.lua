@@ -1,6 +1,23 @@
 -- Add additional capabilities supported by nvim-cmp
 local M = {}
 
+vim.diagnostic.config({
+	virtual_text = false,
+	signs = true,
+	underline = true,
+	update_in_insert = false,
+	severity_sort = false,
+})
+
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+for type, icon in pairs(signs) do
+	local hl = "DiagnosticSign" .. type
+	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
+
+vim.o.updatetime = 250
+vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+
 vim.cmd [[autocmd! ColorScheme * highlight NormalFloat guibg=#1f2335]]
 vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335]]
 
@@ -48,7 +65,8 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
 -- after the language server attaches to the current buffer
 M.on_attach = function(client, bufnr)
 	-- Enable completion triggered by <c-x><c-o>
-	vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+	-- I don't need it.
+	-- vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
 	-- Mappings.
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
