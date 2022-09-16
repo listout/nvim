@@ -19,3 +19,5 @@ require('core.keymaps')
 
 -- Per project configuration
 require('nvim-projectconfig').setup()
+
+require'colorizer'.setup()
