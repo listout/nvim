@@ -35,7 +35,7 @@ local kind_icons = {
 }
 
 -- nvim-cmp setup
-local cmp = require 'cmp'
+local cmp = require('cmp')
 cmp.setup {
 	formatting = {
 		format = function(entry, vim_item)
@@ -69,7 +69,7 @@ cmp.setup {
 		['<C-f>'] = cmp.mapping.scroll_docs(4),
 		['<C-Space>'] = cmp.mapping.complete(),
 		['<CR>'] = cmp.mapping.confirm {
-			behavior = cmp.ConfirmBehavior.Replace,
+			behavior = cmp.ConfirmBehavior.Insert,
 			select = true,
 		},
 		['<Tab>'] = cmp.mapping(function(fallback)
@@ -122,6 +122,10 @@ require'cmp'.setup.cmdline(':', {
 		{ name = 'path' }, -- cmp-path needed
 	}
 })
+
+-- If you want insert `(` after select function or method item
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
 
 -- lazy loading to get in memory snippets of languages you use
 require("luasnip/loaders/from_vscode").lazy_load()
