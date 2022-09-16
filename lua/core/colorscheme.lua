@@ -9,3 +9,10 @@ vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
 
 -- Load the colorscheme
 vim.cmd[[colorscheme tokyonight]]
+--[[
+   [vim.g.moonlight_italic_comments = true
+   [vim.g.moonlight_italic_keywords = true
+   [vim.g.moonlight_italic_functions = true
+   [vim.g.moonlight_borders = true
+   [require('moonlight').set()
+   ]]
