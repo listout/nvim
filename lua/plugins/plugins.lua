@@ -35,6 +35,7 @@ return packer.startup(function(use)
 
 	-- Color scheme
 	use 'folke/tokyonight.nvim'
+	use 'shaunsingh/moonlight.nvim'
 
 	-- Completion and language server
 	use {'neovim/nvim-lspconfig'} -- Collection of configurations for built-in LSP client
@@ -47,12 +48,16 @@ return packer.startup(function(use)
 	use {'hrsh7th/cmp-nvim-lua'}
 	use {'saadparwaiz1/cmp_luasnip'} -- Snippets source for nvim-cmp
 	use {'L3MON4D3/LuaSnip'} -- Snippets plugin
+	use {"rafamadriz/friendly-snippets"}
 
 	-- Show color under hex codes
-	use {'ap/vim-css-color'}
+	use {'norcalli/nvim-colorizer.lua'}
 
 	-- Productivity plugins
-	use {'jiangmiao/auto-pairs'} -- Auto add matching brackets
+	use {
+		"windwp/nvim-autopairs",
+		config = function() require("nvim-autopairs").setup {} end
+	}
 	use {'preservim/nerdcommenter'} -- Easy commenting
 	use {'dhruvasagar/vim-table-mode', ft = {'markdown', 'markdown.pandoc'} } -- Markdown easy tables
 	use {'junegunn/fzf', run = ":call fzf#install()" }
