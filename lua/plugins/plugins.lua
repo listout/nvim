@@ -36,6 +36,7 @@ return packer.startup(function(use)
 	-- Color scheme
 	use 'folke/tokyonight.nvim'
 	use 'shaunsingh/moonlight.nvim'
+	use 'catppuccin/nvim'
 
 	-- Completion and language server
 	use {'neovim/nvim-lspconfig'} -- Collection of configurations for built-in LSP client
@@ -79,7 +80,7 @@ return packer.startup(function(use)
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
 	-- Better per project settings
-	use { 'windwp/nvim-projectconfig' }
+	use { 'jenterkin/vim-autosource' }
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
