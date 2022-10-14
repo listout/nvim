@@ -34,8 +34,6 @@ return packer.startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	-- Color scheme
-	use 'folke/tokyonight.nvim'
-	use 'shaunsingh/moonlight.nvim'
 	use 'catppuccin/nvim'
 
 	-- Completion and language server
