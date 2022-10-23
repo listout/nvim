@@ -7,6 +7,7 @@ require('plugins.lsp-config')
 require('plugins.usnippet')
 require('plugins.statusline')
 require('plugins.treesitter')
+require('plugins.vimtex')
 
 require('core.colorscheme')
 require('core.appearance')
