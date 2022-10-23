@@ -51,9 +51,14 @@ cmp.setup {
 				luasnip = "[LuaSnip]",
 				nvim_lua = "[Lua]",
 				latex_symbols = "[LaTeX]",
+				omni = "[Omni]",
 			})[entry.source.name]
 			return vim_item
 		end
+	},
+	completion = {
+		keyword_length = 1,
+		completeopt = "menu,noselect"
 	},
 	snippet = {
 		expand = function(args)
@@ -94,8 +99,9 @@ cmp.setup {
 		end, { 'i', 's' }),
 	}),
 	sources = cmp.config.sources({
+		{ name = 'omni'},
 		{ name = 'luasnip', option = { use_show_condition = false } },
-		{ name = 'nvim_lsp' },
+		{ name = 'nvim_lsp', },
 		{ name = 'nvim_lsp_signature_help' },
 		{ name = 'path' },
 		{ name = 'buffer' },
