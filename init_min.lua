@@ -1,3 +1,3 @@
-require('core/colorscheme')
-require('core/appearance')
-require('core/options')
+require('core.colorscheme')
+require('core.appearance')
+require('core.options')
