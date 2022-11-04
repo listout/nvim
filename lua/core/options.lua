@@ -23,13 +23,11 @@ opt.fileformats = 'unix,mac,dos'      -- Unix as standard file format
 opt.encoding = 'utf-8'                -- Encoding
 opt.viewoptions = 'folds,cursor,curdir,slash,unix'
 opt.wildignorecase = true
-opt.wildignore =
-  '.git,.hg,.svn,*.pyc,*.o,*.out,*.jpg,*.jpeg,*.png,*.gif,*.zip,**/tmp/**,*.DS_Store,**/node_modules/**,**/bower_modules/**'
+opt.wildignore = '.git,.hg,.svn,*.pyc,*.o,*.out,*.jpg,*.jpeg,*.png,*.gif,*.zip,**/tmp/**,*.DS_Store,**/node_modules/**,**/bower_modules/**'
 opt.hlsearch = false        -- No highlight search
 opt.incsearch = true
 opt.ignorecase = true
 opt.backspace = 'indent,eol,start'
---opt.autochdir = true
 
 -----------------------------------------------------------
 -- Tabs, indent
