@@ -36,6 +36,9 @@ return packer.startup(function(use)
 	-- Color scheme
 	use 'catppuccin/nvim'
 
+	-- File tree
+	use 'nvim-tree/nvim-tree.lua'
+
 	-- Completion and language server
 	use {'neovim/nvim-lspconfig'} -- Collection of configurations for built-in LSP client
 	use {'hrsh7th/cmp-nvim-lsp'} -- LSP source for nvim-cmp
