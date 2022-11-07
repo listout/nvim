@@ -8,6 +8,7 @@ require('plugins.usnippet')
 require('plugins.statusline')
 require('plugins.treesitter')
 require('plugins.vimtex')
+require('plugins.nvim-tree')
 
 require('core.colorscheme')
 require('core.appearance')
