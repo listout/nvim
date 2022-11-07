@@ -49,3 +49,4 @@ vim.cmd([[
 ]])
 
 map('n', '<silent><leader>l', ':Buffers<CR>')
+map('n', '<leader>e', ':NvimTreeToggle<CR>')
