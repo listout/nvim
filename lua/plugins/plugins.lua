@@ -35,6 +35,7 @@ return packer.startup(function(use)
 
 	-- Color scheme
 	use 'Yazeed1s/oh-lucy.nvim'
+	use { "catppuccin/nvim", as = "catppuccin" }
 
 	-- File tree
 	use 'nvim-tree/nvim-tree.lua'
