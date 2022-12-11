@@ -1,4 +1,7 @@
 -- Neovim init file
+if vim.fn.executable('nvr') == 0 then
+	vim.api.nvim_command('!pip3 install --user neovim-remote')
+end
 
 -- Import Lua modules
 require('plugins.plugins')
