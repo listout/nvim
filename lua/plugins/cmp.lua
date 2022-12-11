@@ -112,15 +112,20 @@ cmp.setup.filetype('gitcommit', {
 })
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
 require'cmp'.setup.cmdline('/', {
+	completion = { autocomplete = false },
 	sources = {
-		{ name = 'buffer' } -- cmp-buffer needed
+		-- { name = 'buffer' }
+		{ name = 'buffer', opts = { keyword_pattern = [=[[^[:blank:]].*]=] } }
 	}
 })
 -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-require'cmp'.setup.cmdline(':', {
-	sources = {
-		{ name = 'path' }, -- cmp-path needed
-	}
+cmp.setup.cmdline(':', {
+	completion = { autocomplete = false },
+	sources = cmp.config.sources({
+		{ name = 'path' }
+	}, {
+		{ name = 'cmdline' }
+	})
 })
 
 -- If you want insert `(` after select function or method item
