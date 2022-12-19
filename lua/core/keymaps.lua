@@ -40,13 +40,5 @@ map('t', 'C-w', '<C-\\><C-n><C-w>')
 map('n', '<leader>b', ':Buffers<CR>');
 map('n', '<leader>n', ':Files<CR>');
 
-vim.cmd([[
-	let $FZF_DEFAULT_COMMAND =  "find * -path
-			\ '*/\.*' -prune -o -path 'node_modules/**'
-			\ -prune -o -path 'target/**' -prune -o -path
-			\'dist/**' -prune -o  -type f -print -o -type
-			\ l -print 2> /dev/null"
-]])
-
 map('n', '<silent><leader>l', ':Buffers<CR>')
 map('n', '<leader>e', ':NvimTreeToggle<CR>')
