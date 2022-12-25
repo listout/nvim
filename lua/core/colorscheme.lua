@@ -1,6 +1,6 @@
 -- Config in lua
 require("catppuccin").setup({
-	flavour = "mocha", -- latte, frappe, macchiato, mocha
+	-- flavour = "mocha", -- latte, frappe, macchiato, mocha
 	background = { -- :h background
 	light = "latte",
 	dark = "frappe",
@@ -35,6 +35,7 @@ integrations = {
 	gitsigns = true,
 	nvimtree = true,
 	telescope = true,
+	treesitter = true,
 	notify = false,
 	mini = false,
 	-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
