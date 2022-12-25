@@ -12,6 +12,7 @@ require('plugins.statusline')
 require('plugins.treesitter')
 require('plugins.vimtex')
 require('plugins.nvim-tree')
+require('plugins.gitsigns')
 
 require('core.colorscheme')
 require('core.appearance')
