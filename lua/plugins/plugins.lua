@@ -34,7 +34,6 @@ return packer.startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	-- Color scheme
-	use 'Yazeed1s/oh-lucy.nvim'
 	use { "catppuccin/nvim", as = "catppuccin" }
 
 	-- File tree
@@ -69,8 +68,8 @@ return packer.startup(function(use)
 	use {'junegunn/vim-easy-align'} -- Easy aling with space, = ...
 
 	-- Writing
-	use {'junegunn/goyo.vim', ft = {'markdown', 'markdown.pandoc'}}
-	use {'junegunn/limelight.vim', ft = {'markdown', 'markdown.pandoc'}}
+	use {'junegunn/goyo.vim', ft = {'markdown', 'markdown.pandoc', 'tex', 'c'}}
+	use {'junegunn/limelight.vim', ft = {'markdown', 'markdown.pandoc', 'tex', 'c'}}
 
 	use { 'vim-pandoc/vim-pandoc-syntax', ft = { 'markdown', 'markdown.pandoc' } }
 	use { 'lervag/vimtex', ft = { 'tex' } }
@@ -83,6 +82,9 @@ return packer.startup(function(use)
 
 	-- Better per project settings
 	use { 'jenterkin/vim-autosource' }
+
+	-- Show git signs and stage hunks
+	use { 'lewis6991/gitsigns.nvim' }
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
