@@ -28,7 +28,7 @@ opt.pumheight = 15
 opt.helpheight = 12
 opt.previewheight = 12
 opt.showcmd = false
-opt.listchars = 'tab:▸ ,extends:›,precedes:‹,nbsp:·,trail:·'
+opt.listchars = 'tab:░ ,extends:›,precedes:‹,nbsp:·,trail:·'
 opt.background = 'dark'
 opt.cmdheight = 2
 opt.fillchars = {
@@ -49,4 +49,3 @@ vim.cmd [[
 	highlight Indentifier cterm=none gui=italic
 	highlight Comment cterm=italic gui=italic
 ]]
-
