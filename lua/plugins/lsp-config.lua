@@ -4,9 +4,12 @@ local M = {}
 vim.diagnostic.config({
 	virtual_text = false,
 	signs = true,
-	underline = true,
-	update_in_insert = false,
+	underline = false,
+	update_in_insert = true,
 	severity_sort = false,
+	float = {
+		source = "always",
+	},
 })
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
@@ -16,7 +19,9 @@ for type, icon in pairs(signs) do
 end
 
 vim.o.updatetime = 250
-vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+--vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+--vim.cmd [[autocmd! ColorScheme * highlight NormalFloat guibg=#4c4f69]]
+--vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335]]
 
 local border = {
 	{"🭽", "FloatBorder"},
@@ -27,12 +32,6 @@ local border = {
 	{"▁", "FloatBorder"},
 	{"🭼", "FloatBorder"},
 	{"▏", "FloatBorder"},
-}
-
--- LSP settings (for overriding per client)
-local handlers =  {
-	["textDocument/hover"] =  vim.lsp.with(vim.lsp.handlers.hover, {border = border}),
-	["textDocument/signatureHelp"] =  vim.lsp.with(vim.lsp.handlers.signature_help, {border = border }),
 }
 
 -- To instead override globally
@@ -48,15 +47,11 @@ M.capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 local lspconfig = require('lspconfig')
 
-vim.lsp.set_log_level(vim.log.levels.DEBUG)
+--vim.lsp.set_log_level(vim.log.levels.DEBUG)
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 M.on_attach = function(client, bufnr)
-	-- Enable completion triggered by <c-x><c-o>
-	-- I don't need it.
-	-- vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-
 	-- Mappings.
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
 	local bufopts = { noremap=true, silent=true, buffer=bufnr }
@@ -81,11 +76,21 @@ M.on_attach = function(client, bufnr)
 	vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 	vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 	vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
-end
 
-M.lsp_flags = {
-	-- This is the default in Nvim 0.7+
-	debounce_text_changes = 150,
-}
+	vim.api.nvim_create_autocmd("CursorHold", {
+		buffer = bufnr,
+		callback = function()
+			local opts = {
+				focusable = false,
+				close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+				border = 'rounded',
+				source = 'always',
+				prefix = ' ',
+				scope = 'cursor',
+			}
+			vim.diagnostic.open_float(nil, opts)
+		end
+	})
+end
 
 return M
