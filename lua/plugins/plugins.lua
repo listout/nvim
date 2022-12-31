@@ -35,6 +35,7 @@ return packer.startup(function(use)
 
 	-- Color scheme
 	use { "catppuccin/nvim", as = "catppuccin" }
+	use "rebelot/kanagawa.nvim"
 
 	-- File tree
 	use 'nvim-tree/nvim-tree.lua'
