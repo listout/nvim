@@ -52,6 +52,7 @@ return packer.startup(function(use)
 	use {'saadparwaiz1/cmp_luasnip'} -- Snippets source for nvim-cmp
 	use {'L3MON4D3/LuaSnip'} -- Snippets plugin
 	use {"rafamadriz/friendly-snippets"}
+	use({"petertriho/cmp-git", requires = "nvim-lua/plenary.nvim"}) -- nvim-cmp source for git commits
 
 	-- Show color under hex codes
 	use {'norcalli/nvim-colorizer.lua'}
