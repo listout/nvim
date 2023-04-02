@@ -52,6 +52,7 @@ return packer.startup(function(use)
 	use {'saadparwaiz1/cmp_luasnip'} -- Snippets source for nvim-cmp
 	use {'L3MON4D3/LuaSnip'} -- Snippets plugin
 	use {"rafamadriz/friendly-snippets"}
+	use({"petertriho/cmp-git", requires = "nvim-lua/plenary.nvim"})
 
 	-- Show color under hex codes
 	use {'norcalli/nvim-colorizer.lua'}
@@ -86,6 +87,8 @@ return packer.startup(function(use)
 
 	-- Show git signs and stage hunks
 	use { 'lewis6991/gitsigns.nvim' }
+
+	use { 'nvim-lualine/lualine.nvim' }
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

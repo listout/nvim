@@ -1,20 +1,67 @@
 -- Default options:
-require('kanagawa').setup({
-	undercurl = true,           -- enable undercurls
-	commentStyle = { italic = true },
-	functionStyle = {},
-	keywordStyle = { italic = true},
-	statementStyle = { bold = true },
-	typeStyle = {},
-	variablebuiltinStyle = { italic = true},
-	specialReturn = true,       -- special highlight for the return keyword
-	specialException = true,    -- special highlight for exception handling keywords
-	transparent = false,        -- do not set background color
-	dimInactive = false,        -- dim inactive window `:h hl-NormalNC`
-	globalStatus = false,       -- adjust window separators highlight for laststatus=3
-	terminalColors = true,      -- define vim.g.terminal_color_{0,17}
-	colors = {},
-	overrides = {},
-	theme = "default"           -- Load "default" theme or the experimental "light" theme
+require("catppuccin").setup({
+		flavour = "macchiato", -- latte, frappe, macchiato, mocha
+		background = { -- :h background
+		light = "latte",
+		dark = "macchiato",
+	},
+	transparent_background = false,
+	show_end_of_buffer = false, -- show the '~' characters after the end of buffers
+	term_colors = true,
+	dim_inactive = {
+		enabled = false,
+		shade = "dark",
+		percentage = 0.15,
+	},
+	no_italic = false, -- Force no italic
+	no_bold = false, -- Force no bold
+	styles = {
+		comments = { "italic" },
+		conditionals = { "italic" },
+		loops = {},
+		functions = {},
+		keywords = {},
+		strings = {},
+		variables = {},
+		numbers = {},
+		booleans = {},
+		properties = {},
+		types = {},
+		operators = {},
+	},
+	color_overrides = {},
+	custom_highlights = {},
+	integrations = {
+		cmp = true,
+		gitsigns = true,
+		nvimtree = true,
+		telescope = true,
+		treesitter = true,
+		markdown = true,
+		gitsigns = true,
+		notify = false,
+		mini = false,
+		-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+		native_lsp = {
+			enabled = true,
+			virtual_text = {
+				errors = { "italic" },
+				hints = { "italic" },
+				warnings = { "italic" },
+				information = { "italic" },
+			},
+			underlines = {
+				errors = { "underline" },
+				hints = { "underline" },
+				warnings = { "underline" },
+				information = { "underline" },
+			},
+		},
+	},
 })
-vim.cmd[[colorscheme kanagawa]]
+vim.api.nvim_create_autocmd('ColorScheme', {
+	callback = function ()
+		vim.api.nvim_set_hl(0, '@lsp.type.comment.c', {fg='Grey'})
+	end
+})
+vim.cmd[[colorscheme catppuccin]]

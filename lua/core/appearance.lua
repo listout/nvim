@@ -49,3 +49,4 @@ vim.cmd [[
 	highlight Indentifier cterm=none gui=italic
 	highlight Comment cterm=italic gui=italic
 ]]
+vim.cmd[[ "syntax sync fromstart" ]]
