@@ -58,10 +58,7 @@ return packer.startup(function(use)
 	use {'norcalli/nvim-colorizer.lua'}
 
 	-- Productivity plugins
-	use {
-		"windwp/nvim-autopairs",
-		config = function() require("nvim-autopairs").setup {} end
-	}
+	use {'windwp/nvim-autopairs'} -- Auto pairs
 	use {'preservim/nerdcommenter'} -- Easy commenting
 	use {'dhruvasagar/vim-table-mode', ft = {'markdown', 'markdown.pandoc'} } -- Markdown easy tables
 	use {'junegunn/fzf', run = ":call fzf#install()" }
@@ -81,9 +78,6 @@ return packer.startup(function(use)
 
 	-- Treesitter integration
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-
-	-- Better per project settings
-	use { 'jenterkin/vim-autosource' }
 
 	-- Show git signs and stage hunks
 	use { 'lewis6991/gitsigns.nvim' }
