@@ -13,6 +13,7 @@ require('plugins.treesitter')
 require('plugins.vimtex')
 require('plugins.nvim-tree')
 require('plugins.gitsigns')
+require('plugins.autopairs')
 
 require('core.colorscheme')
 require('core.appearance')
