@@ -37,8 +37,10 @@ map('n', 'M-h', ':vertical resize +2<CR>')
 
 map('t', 'C-w', '<C-\\><C-n><C-w>')
 
-map('n', '<leader>b', ':Buffers<CR>');
-map('n', '<leader>n', ':Files<CR>');
+map('n', '<leader>B', ':Buffers<CR>') -- FZF show open buffers
+map('n', '<leader>F', ':Files<CR>')   -- FZF show files
+map('n', '<leader>A', ':Ag<CR>')      -- FZF call the the_silver_searcher
+map('n', '<leader>C', ':Commits<CR>') -- FZF show git commits
+map('n', '<leader>M', ':Maps<CR>')    -- FZF show normal mode mappings
 
-map('n', '<silent><leader>l', ':Buffers<CR>')
 map('n', '<leader>e', ':NvimTreeToggle<CR>')
