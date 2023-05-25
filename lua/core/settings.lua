@@ -14,6 +14,8 @@ u.create_augroup({
 
 -- Autoremove unwanted whitespaces
 cmd [[
-    au BufWritePre * %s/\s\+$//e
     au BufRead,BufNewFile *mutt-* setfiletype mail
 ]]
+
+-- Add in the following like to auto remove empty lines
+-- au BufWritePre * %s/\s\+$//e
