@@ -15,11 +15,11 @@ require('plugins.nvim-tree')
 require('plugins.gitsigns')
 require('plugins.autopairs')
 
-require('core.colorscheme')
 require('core.appearance')
 require('core.options')
 require('core.utils')
 require('core.settings')
 require('core.keymaps')
+require('core.colorscheme')
 
 require'colorizer'.setup()
