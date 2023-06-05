@@ -34,8 +34,7 @@ return packer.startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	-- Color scheme
-	use { "catppuccin/nvim", as = "catppuccin" }
-	use "rebelot/kanagawa.nvim"
+	use {'nyoom-engineering/oxocarbon.nvim'}
 
 	-- File tree
 	use 'nvim-tree/nvim-tree.lua'
