@@ -2,14 +2,14 @@
 -- Author: shadmansaleh
 -- Credit: glepnir
 local lualine = require('lualine')
-local C = require("catppuccin.palettes").get_palette()
-local O = require("catppuccin").options
+-- local C = require("catppuccin.palettes").get_palette()
+-- local O = require("catppuccin").options
 
 -- Color table for highlights
 -- stylua: ignore
 local colors = {
-	bg       = C.surface3,
-	fg       = C.blue,
+	-- bg       = C.surface3,
+	-- fg       = C.blue,
 	yellow   = '#ECBE7B',
 	cyan     = '#008080',
 	darkblue = '#081633',
