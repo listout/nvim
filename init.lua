@@ -25,8 +25,15 @@ require'colorizer'.setup()
 
 -- Setup language servers.
 local lspconfig = require('lspconfig')
-lspconfig.clangd.setup{}
+lspconfig.clangd.setup{
+	on_attach = require("plugins.lsp-config").on_attach,
+	cpabilities = require("plugins.lsp-config").cpabilities,
+	lsp_flags = require("plugins.lsp-config").lsp_flags,
+}
 lspconfig.lua_ls.setup {
+	on_attach = require("plugins.lsp-config").on_attach,
+	cpabilities = require("plugins.lsp-config").cpabilities,
+	lsp_flags = require("plugins.lsp-config").lsp_flags,
 	settings = {
 		Lua = {
 			runtime = {
