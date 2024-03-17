@@ -50,7 +50,7 @@ require("lazy").setup({
 	{ "lervag/vimtex",                      ft = { 'tex' } },
 
 	-- Git intigration
-	{ "tpope/vim-fugitive",                 ft = { 'cpp', 'c' } },
+	{ "tpope/vim-fugitive", },
 
 	-- Show git signs and stage hunks
 	{ "lewis6991/gitsigns.nvim" },
