@@ -1,4 +1,6 @@
-require 'lspconfig'.lua_ls.setup {
+-- Setup language servers
+local lspconfig = require('lspconfig')
+lspconfig.lua_ls.setup {
 	settings = {
 		Lua = {
 			runtime = {
@@ -24,6 +26,7 @@ require 'lspconfig'.lua_ls.setup {
 		},
 	},
 }
+lspconfig.clangd.setup {}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
