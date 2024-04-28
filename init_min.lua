@@ -1,3 +1,9 @@
-require('core.appearance')
-require('core.options')
-require('core.colorscheme')
+-- Load plugins
+require('keymaps')
+require('basics')
+require('ftsettings')
+require('appearance')
+require('plugins')
+require('plugins.colorscheme')
+require('plugins.lualine')
+require('plugins.treesitter')
