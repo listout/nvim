@@ -56,6 +56,7 @@ require("lazy").setup({
 	-- Show git signs and stage hunks
 	{ "lewis6991/gitsigns.nvim" },
 
+	-- Status Line
 	{ "nvim-lualine/lualine.nvim" },
 
 	-- File tree
