@@ -33,6 +33,7 @@ require("lazy").setup({
 	{ "L3MON4D3/LuaSnip" },      -- Snippets plugin
 	{ "rafamadriz/friendly-snippets" },
 	{ "petertriho/cmp-git",                 dependencies = "nvim-lua/plenary.nvim" },
+	{ "micangl/cmp-vimtex" },
 
 	-- Productivity plugins
 	{ "windwp/nvim-autopairs" },                                                   -- Auto pairs
