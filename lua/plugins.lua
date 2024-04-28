@@ -48,7 +48,7 @@ require("lazy").setup({
 	{ "junegunn/goyo.vim",                  ft = { 'markdown', 'markdown.pandoc', 'tex', 'c' } },
 	{ "junegunn/limelight.vim",             ft = { 'markdown', 'markdown.pandoc', 'tex', 'c' } },
 	{ "vim-pandoc/vim-pandoc-syntax",       ft = { 'markdown', 'markdown.pandoc' } },
-	{ "lervag/vimtex",                      ft = { 'tex' } },
+	{ "lervag/vimtex",                      ft = { 'tex' },                                    lazy = false },
 
 	-- Git intigration
 	{ "tpope/vim-fugitive", },
