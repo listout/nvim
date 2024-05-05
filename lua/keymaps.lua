@@ -43,7 +43,7 @@ map('n', '<leader>A', ':Rg<CR>')      -- FZF call ripgrep
 map('n', '<leader>C', ':Commits<CR>') -- FZF show git commits
 map('n', '<leader>M', ':Maps<CR>')    -- FZF show normal mode mappings
 
-map('n', '<leader>e', ':NvimTreeToggle<CR>')
+map('n', '<leader>E', ':NvimTreeToggle<CR>')
 
 local keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
