@@ -30,7 +30,7 @@ require("lazy").setup({
 	{ "hrsh7th/nvim-cmp" },      -- Autocompletion plugin
 	{ "hrsh7th/cmp-nvim-lua" },
 	{ "saadparwaiz1/cmp_luasnip" }, -- Snippets source for nvim-cmp
-	{ "L3MON4D3/LuaSnip" },      -- Snippets plugin
+	{ "L3MON4D3/LuaSnip",                   version = "v2.*",                                  build = "make install_jsregexp" }, -- Snippets plugin
 	{ "rafamadriz/friendly-snippets" },
 	{ "petertriho/cmp-git",                 dependencies = "nvim-lua/plenary.nvim" },
 	{ "micangl/cmp-vimtex" },
