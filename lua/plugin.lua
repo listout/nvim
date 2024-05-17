@@ -18,38 +18,76 @@ require("lazy").setup({
 	{ "metalelf0/jellybeans-nvim" },
 
 	-- Treesitter integration
-	{ "nvim-treesitter/nvim-treesitter",    build = ":TSUpdate" },
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate"
+	},
 
 	-- Completion and language server
-	{ "neovim/nvim-lspconfig" }, -- Collection of configurations for built-in LSP client
-	{ "hrsh7th/cmp-nvim-lsp" },  -- LSP source for nvim-cmp
-	{ "hrsh7th/cmp-buffer" },    -- LSP source nvim-cmp
-	{ "hrsh7th/cmp-path" },      -- LSP source for nvim-cmp
-	{ "hrsh7th/cmp-cmdline" },   -- LSP source nvim-cmp
+	{ "neovim/nvim-lspconfig" },
+	{ "hrsh7th/cmp-nvim-lsp" },
+	{ "hrsh7th/cmp-buffer" },
+	{ "hrsh7th/cmp-path" },
+	{ "hrsh7th/cmp-cmdline" },
 	{ "hrsh7th/cmp-nvim-lsp-signature-help" },
-	{ "hrsh7th/nvim-cmp" },      -- Autocompletion plugin
+	{ "hrsh7th/nvim-cmp" },
 	{ "hrsh7th/cmp-nvim-lua" },
-	{ "saadparwaiz1/cmp_luasnip" }, -- Snippets source for nvim-cmp
-	{ "L3MON4D3/LuaSnip",                   version = "v2.*",                                  build = "make install_jsregexp" }, -- Snippets plugin
+	{ "saadparwaiz1/cmp_luasnip" },
+	{
+		"L3MON4D3/LuaSnip",
+		version = "v2.*",
+		build = "make install_jsregexp"
+	},
 	{ "rafamadriz/friendly-snippets" },
-	{ "petertriho/cmp-git",                 dependencies = "nvim-lua/plenary.nvim" },
+	{
+		"petertriho/cmp-git",
+		dependencies = "nvim-lua/plenary.nvim"
+	},
 	{ "micangl/cmp-vimtex" },
 
 	-- Productivity plugins
-	{ "windwp/nvim-autopairs" },                                                   -- Auto pairs
-	{ "preservim/nerdcommenter" },                                                 -- Easy commenting
-	{ "dhruvasagar/vim-table-mode",         ft = { 'markdown', 'markdown.pandoc' } }, -- Markdown easy tables
-	{ "junegunn/fzf",                       build = ":call fzf#install()" },
-	{ "junegunn/fzf.vim" },                                                        -- Fuzzy file finding
-	{ "tpope/vim-surround" },                                                      -- Easy surrounding with brackets, quotes ...
-	{ "junegunn/vim-easy-align" },                                                 -- Easy aling with space, = ...
+	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = true
+	},
+	{ "preservim/nerdcommenter" },
+	{
+		"dhruvasagar/vim-table-mode",
+		ft = { 'markdown', 'markdown.pandoc' }
+	},
+	{
+		"junegunn/fzf",
+		build = ":call fzf#install()"
+	},
+	{ "junegunn/fzf.vim" },
+	{ "tpope/vim-surround" },
+	{ "junegunn/vim-easy-align" },
 
 	-- Writing
-	{ "junegunn/goyo.vim",                  ft = { 'markdown', 'markdown.pandoc', 'tex', 'c' } },
-	{ "junegunn/limelight.vim",             ft = { 'markdown', 'markdown.pandoc', 'tex', 'c' } },
-	{ "vim-pandoc/vim-pandoc",              ft = { 'markdown', 'markdown.pandoc' },            lazy = false },
-	{ "vim-pandoc/vim-pandoc-syntax",       ft = { 'markdown', 'markdown.pandoc' },            lazy = false },
-	{ "lervag/vimtex",                      ft = { 'tex' },                                    lazy = false },
+	{
+		"junegunn/goyo.vim",
+		ft = { 'markdown', 'markdown.pandoc', 'tex', 'c' }
+	},
+	{
+		"junegunn/limelight.vim",
+		ft = { 'markdown', 'markdown.pandoc', 'tex', 'c' }
+	},
+	{
+		"vim-pandoc/vim-pandoc",
+		ft = { 'markdown', 'markdown.pandoc' },
+		lazy = false
+	},
+	{
+		"vim-pandoc/vim-pandoc-syntax",
+		ft = { 'markdown', 'markdown.pandoc' },
+		lazy = false
+	},
+	{
+		"lervag/vimtex",
+		ft = { 'tex' },
+		lazy = false
+	},
 
 	-- Git intigration
 	{ "tpope/vim-fugitive", },
