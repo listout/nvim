@@ -54,7 +54,7 @@ require("lazy").setup({
 	{ "preservim/nerdcommenter" },
 	{
 		"dhruvasagar/vim-table-mode",
-		ft = { 'markdown', 'markdown.pandoc' }
+		ft = { 'markdown', 'markdown.pandoc', 'pandoc' }
 	},
 	{
 		"junegunn/fzf",
