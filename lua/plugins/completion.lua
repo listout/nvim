@@ -37,6 +37,11 @@ local cmp_kinds = {
 -- nvim-cmp setup
 local cmp = require('cmp')
 cmp.setup {
+	view = {
+		docs = {
+			auto_open = false
+		},
+	},
 	formatting = {
 		fields = { "kind", "abbr" },
 		format = function(_, vim_item)
