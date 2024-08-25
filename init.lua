@@ -12,20 +12,29 @@ _G.vim.opt_local.path:append(path .. '/lua')
 end
 _G.vim.opt_local.suffixesadd:prepend('.lua')
 
+local function get_hostname()
+	local f = io.open("/etc/hostname")
+	local hostname = f:read("*a") or ""
+	f:close()
+	hostname = string.gsub(hostname, "\n$", "")
+	return hostname
+end
 
 -- Load plugins
 require('keymaps')
 require('basics')
 require('ftsettings')
 require('appearance')
-require('plugin')
-require('plugins.lualine')
-require('plugins.autopair')
-require('plugins.colorscheme')
-require('plugins.lsp')
-require('plugins.completion')
-require('plugins.gitsigns')
-require('plugins.nvim-tree')
-require('plugins.treesitter')
-require('plugins.usnippet')
-require('plugins.vimtex')
+if get_hostname() ~= "shoggoth" then
+	require('plugin')
+	require('plugins.lualine')
+	require('plugins.autopair')
+	require('plugins.colorscheme')
+	require('plugins.lsp')
+	require('plugins.completion')
+	require('plugins.gitsigns')
+	require('plugins.nvim-tree')
+	require('plugins.treesitter')
+	require('plugins.usnippet')
+	require('plugins.vimtex')
+end
