@@ -15,7 +15,10 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	-- Color scheme
 	{ "rktjmp/lush.nvim" },
+	{ "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, },
 	{ "metalelf0/jellybeans-nvim" },
+	{ "nyoom-engineering/oxocarbon.nvim" },
+	{ "EdenEast/nightfox.nvim" },
 
 	-- Treesitter integration
 	{
