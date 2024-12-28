@@ -51,3 +51,11 @@ keymap("i", "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
 keymap("s", "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
 keymap("i", "<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
 keymap("s", "<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
+
+-- Global mappings.
+-- See `:help vim.diagnostic.*` for documentation on any of the below functions
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
+-- vim.keymap.set('n', '[d', vim.diagnostic.jump({count=1, float=true}))
+-- vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+vim.diagnostic.config({ jump = { float = true }})
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
