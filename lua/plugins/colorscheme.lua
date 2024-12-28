@@ -1,1 +1,5 @@
-vim.cmd[[colorscheme carbonfox]]
+return {
+	{ 
+		"EdenEast/nightfox.nvim" 
+	},
+}
