@@ -3,6 +3,9 @@ if vim.fn.executable('nvr') == 0 then
 	vim.api.nvim_command('!pip3 install --user --break-system-packages neovim-remote')
 end
 
+-- Change leader to a comma
+vim.g.mapleader = ','
+
 local function get_hostname()
 	local f = io.open("/etc/hostname")
 	local hostname = f:read("*a") or ""
@@ -10,10 +13,6 @@ local function get_hostname()
 	hostname = string.gsub(hostname, "\n$", "")
 	return hostname
 end
-
-require 'basics'
-require 'appearance'
-require 'keymaps'
 
 -- Load plugins on devices other than RPi
 if get_hostname() ~= "shoggoth" then
