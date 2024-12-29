@@ -10,7 +10,6 @@ local cache_dir = os.getenv('HOME') .. '/.cache/nvim/'
 -- General
 -----------------------------------------------------------
 opt.mouse = 'a'                       -- Enable mouse support
-opt.clipboard = 'unnamedplus'         -- Copy/paste to system clipboard
 opt.swapfile = false                  -- Don't use swapfile
 opt.completeopt = 'menuone,noinsert,noselect'  -- Autocomplete options
 opt.history = 500                     -- Lines vim should remember
