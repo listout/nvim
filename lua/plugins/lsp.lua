@@ -116,11 +116,11 @@ return {
 			--- In .nvim.lua of your project paste in this
 			---
 			--- require'lspconfig'.clangd.setup{
-				--- 	on_attach = require("plugins.lsp-config").on_attach,
-				--- 	cpabilities = require("plugins.lsp-config").cpabilities,
-				--- 	lsp_flags = require("plugins.lsp-config").lsp_flags,
-				--- 	cmd = {vim.fn.expand('~/esp/esp-clang/bin/clangd')}
-				--- }
+			--- 	on_attach = require("plugins.lsp-config").on_attach,
+			--- 	cpabilities = require("plugins.lsp-config").cpabilities,
+			--- 	lsp_flags = require("plugins.lsp-config").lsp_flags,
+			--- 	cmd = {vim.fn.expand('~/esp/esp-clang/bin/clangd')}
+			--- }
 		end,
 	},
 }
