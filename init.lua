@@ -66,6 +66,6 @@ if get_hostname() ~= "shoggoth" then
 		},
 	})
 
-	vim.cmd.colorscheme "carbonfox"
+	vim.cmd.colorscheme "jellybeans-nvim"
 end
 -- Load plugins on devices other than RPi
