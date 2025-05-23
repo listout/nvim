@@ -38,9 +38,6 @@ return {
 				}
 			})
 			lspconfig.lua_ls.setup {}
-			lspconfig.clangd.setup {
-				autostart = false,
-			}
 
 			-- Use LspAttach autocommand to only map the following keys
 			-- after the language server attaches to the current buffer
