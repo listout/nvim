@@ -14,3 +14,6 @@ let g:vimtex_quickfix_ignore_filters = [
       \ 'Over-specification in `v',
       \ '\\headheight is too small'
       \]
+
+let g:tex_flavor = "xelatex"
+let g:vimtex_view_general_viewer = 'zathura'
