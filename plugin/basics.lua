@@ -28,6 +28,7 @@ opt.incsearch = true
 opt.ignorecase = true
 opt.backspace = 'indent,eol,start'
 opt.exrc = true
+opt.signcolumn = 'number' -- Display signs in the 'number' column.
 
 -----------------------------------------------------------
 -- Tabs, indent
