@@ -1,5 +1,6 @@
 vim.lsp.enable({
-	"lua_ls"
+	"lua_ls",
+	"clangd"
 })
 
 -- Use LspAttach autocommand to only map the following keys
