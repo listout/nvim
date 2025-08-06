@@ -29,7 +29,7 @@ opt.incsearch = true
 opt.ignorecase = true
 opt.backspace = 'indent,eol,start'
 opt.exrc = true
-opt.signcolumn = 'auto' -- Display only when there is a sign to display
+opt.signcolumn = 'yes' -- Display only when there is a sign to display
 
 -----------------------------------------------------------
 -- Tabs, indent
