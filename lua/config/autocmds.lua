@@ -11,7 +11,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 -- close some filetypes with <q>
-	vim.api.nvim_create_autocmd("FileType", {
+vim.api.nvim_create_autocmd("FileType", {
 	group = augroup("close_with_q"),
 	pattern = {
 		"diff",
