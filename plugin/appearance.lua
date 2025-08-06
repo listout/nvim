@@ -43,6 +43,7 @@ opt.fillchars = {
 	foldsep = "│",
 	foldclose = "▸",
 }
+opt.winborder = "rounded" -- Defines the default border style of floating windows
 
 vim.cmd [[
 	" Function, identifier and comments in italic
