@@ -21,42 +21,8 @@ return {
 	{
 		"hrsh7th/nvim-cmp",
 		config = function()
-			local has_words_before = function()
-				local line, col = table.unpack(vim.api.nvim_win_get_cursor(0))
-				return col ~= 0 and
-					vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
-			end
-
 			-- luasnip setup
 			local luasnip = require 'luasnip'
-
-			local cmp_kinds = {
-				Text = "",
-				Method = "󰆧",
-				Function = "󰊕",
-				Constructor = "",
-				Field = "󰇽",
-				Variable = "󰂡",
-				Class = "󰠱",
-				Interface = "",
-				Module = "",
-				Property = "󰜢",
-				Unit = "",
-				Value = "󰎠",
-				Enum = "",
-				Keyword = "󰌋",
-				Snippet = "",
-				Color = "󰏘",
-				File = "󰈙",
-				Reference = "",
-				Folder = "󰉋",
-				EnumMember = "",
-				Constant = "󰏿",
-				Struct = "",
-				Event = "",
-				Operator = "󰆕",
-				TypeParameter = "󰅲",
-			}
 
 			-- nvim-cmp setup
 			local cmp = require 'cmp'
@@ -116,7 +82,6 @@ return {
 							fallback()
 						end
 					end, { "i", "s" }),
-
 					["<S-Tab>"] = cmp.mapping(function(fallback)
 						if cmp.visible() then
 							cmp.select_prev_item()
@@ -128,7 +93,6 @@ return {
 					end, { "i", "s" }),
 				}),
 				sources = cmp.config.sources({
-					{ name = 'luasnip',                option = { show_autosnippets = true } },
 					{ name = 'nvim_lsp' },
 					{
 						name = 'luasnip',
@@ -172,7 +136,8 @@ return {
 					{ name = 'path' }
 				}, {
 					{ name = 'cmdline' }
-				})
+				}),
+				matching = { disallow_symbol_nonprefix_matching = false }
 			})
 
 			-- If you want insert `(` after select function or method item
