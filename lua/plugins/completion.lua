@@ -17,6 +17,7 @@ return {
 		dependencies = "nvim-lua/plenary.nvim"
 	},
 	{ "micangl/cmp-vimtex" },
+	{ "onsails/lspkind.nvim" },
 	{
 		"hrsh7th/nvim-cmp",
 		config = function()
@@ -59,6 +60,8 @@ return {
 
 			-- nvim-cmp setup
 			local cmp = require 'cmp'
+			local lspkind = require('lspkind')
+
 			cmp.setup {
 				view = {
 					docs = {
@@ -66,11 +69,16 @@ return {
 					},
 				},
 				formatting = {
-					fields = { "kind", "abbr" },
-					format = function(_, vim_item)
-						vim_item.kind = cmp_kinds[vim_item.kind] or ""
-						return vim_item
-					end,
+					format = lspkind.cmp_format({
+						mode = "symbol_text",
+						menu = ({
+							buffer = "[Buffer]",
+							nvim_lsp = "[LSP]",
+							luasnip = "[LuaSnip]",
+							nvim_lua = "[Lua]",
+							latex_symbols = "[Latex]",
+						})
+					}),
 				},
 				snippet = {
 					expand = function(args)
