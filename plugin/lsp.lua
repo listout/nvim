@@ -1,6 +1,7 @@
 vim.lsp.enable({
 	"lua_ls",
-	"clangd"
+	"clangd",
+	"basedpyright"
 })
 
 -- Use LspAttach autocommand to only map the following keys
