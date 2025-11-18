@@ -60,7 +60,6 @@ vim.diagnostic.config({
 	}
 })
 
-vim.o.updatetime = 250
 -- vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})
 -- vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 vim.cmd [[autocmd! ColorScheme * highlight NormalFloat guibg=#4c4f69]]
