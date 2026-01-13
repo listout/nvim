@@ -77,6 +77,8 @@ return {
 				}),
 				sources = cmp.config.sources({
 					{ name = 'nvim_lsp' },
+					{ name = 'vimtex' },
+					{ name = 'nvim_lsp_signature_help' },
 					{
 						name = 'luasnip',
 						option =
@@ -85,11 +87,9 @@ return {
 							show_autosnippets = true,
 						}
 					},
-					{ name = 'nvim_lsp_signature_help' },
-					{ name = 'path' },
 					{ name = 'buffer' },
+					{ name = 'path' },
 					{ name = 'nvim_lua' },
-					{ name = 'vimtex' },
 				}),
 			}
 
