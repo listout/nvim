@@ -8,7 +8,9 @@ return {
 			null_ls.setup({
 				sources = {
 					null_ls.builtins.formatting.black,
-					null_ls.builtins.completion.spell,
+					null_ls.builtins.completion.spell.with({
+						filetypes = { "markdown", "text", "gitcommit" }
+					}),
 				},
 			})
 		end,
