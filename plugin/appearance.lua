@@ -33,11 +33,10 @@ opt.listchars = 'tab:░ ,extends:›,precedes:‹,nbsp:·,trail:·'
 opt.background = 'dark'
 opt.cmdheight = 2
 opt.fillchars = {
-	diff = "╱",
+	diff = "╱", -- alternatives = ⣿ ░ ─ ╱
 	vert = "│",
 	fold = "⠀",
 	eob = " ", -- suppress ~ at EndOfBuffer
-	--diff = "⣿", -- alternatives = ⣿ ░ ─ ╱
 	msgsep = "‾",
 	foldopen = "▾",
 	foldsep = "│",
