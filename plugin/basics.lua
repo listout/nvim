@@ -43,6 +43,21 @@ opt.autoindent = true  -- Copy indent from current line when starting new line
 opt.cindent = true     -- C programming indentation
 
 -----------------------------------------------------------
+-- Equal window sizes when resizing
+-----------------------------------------------------------
+vim.api.nvim_create_autocmd({
+	"VimResized",
+	"WinNew",
+	"WinClosed",
+}, {
+	callback = function()
+		vim.cmd("wincmd =")
+	end,
+})
+opt.equalalways = true
+opt.eadirection = "both"
+
+-----------------------------------------------------------
 -- Memory, CPU
 -----------------------------------------------------------
 opt.hidden = true     -- Enable background buffers
