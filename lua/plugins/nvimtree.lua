@@ -1,6 +1,7 @@
 return {
 	{
 		"nvim-tree/nvim-tree.lua",
+		cmd = { "NvimTreeToggle", "NvimTreeOpen" },
 		config = function()
 			require("nvim-tree").setup({
 				sort = {
