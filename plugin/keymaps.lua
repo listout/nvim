@@ -54,5 +54,23 @@ keymap("s", "<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 -- vim.keymap.set('n', '[d', vim.diagnostic.jump({count=1, float=true}))
 -- vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
-vim.diagnostic.config({ jump = { float = true }})
+-- vim.diagnostic.config({ jump = { float = true }})
+vim.keymap.set('n', '[d', function()
+	vim.diagnostic.jump({
+		count = -1,
+		float = {
+			border = "rounded",
+			source = "always",
+		},
+	})
+end)
+vim.keymap.set('n', ']d', function()
+	vim.diagnostic.jump({
+		count = 1,
+		float = {
+			border = "rounded",
+			source = "always",
+		},
+	})
+end)
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
