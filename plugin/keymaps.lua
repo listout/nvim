@@ -7,7 +7,7 @@ local function map(mode, lhs, rhs, opts)
 	if opts then
 		options = vim.tbl_extend('force', options, opts)
 	end
-	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+	vim.keymap.set(mode, lhs, rhs, options)
 end
 
 -----------------------------------------------------------
@@ -42,7 +42,7 @@ map('n', '<leader>M', ':Maps<CR>')    -- FZF show normal mode mappings
 
 map('n', '<leader>E', ':NvimTreeToggle<CR>')
 
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 keymap("i", "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
 keymap("s", "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
