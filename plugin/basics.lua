@@ -45,11 +45,11 @@ opt.cindent = true     -- C programming indentation
 -----------------------------------------------------------
 -- Equal window sizes when resizing
 -----------------------------------------------------------
-vim.api.nvim_create_autocmd({
-	"VimResized",
-	"WinNew",
-	"WinClosed",
-}, {
+-- Only on terminal resize: WinNew/WinClosed also fire for floating windows
+-- (hover, completion docs, fzf) and would reset manually sized splits.
+-- 'equalalways' already handles splitting/closing normal windows.
+vim.api.nvim_create_autocmd("VimResized", {
+	group = vim.api.nvim_create_augroup("user_equalize_windows", { clear = true }),
 	callback = function()
 		vim.cmd("wincmd =")
 	end,
