@@ -1,16 +1,15 @@
 return {
 	{
 		"junegunn/goyo.vim",
-		ft = { 'markdown', 'markdown.pandoc', 'tex', 'c' }
+		cmd = "Goyo"
 	},
 	{
 		"junegunn/limelight.vim",
-		ft = { 'markdown', 'markdown.pandoc', 'tex', 'c' }
+		cmd = "Limelight"
 	},
 	{
 		"vim-pandoc/vim-pandoc-syntax",
 		ft = { 'markdown', 'markdown.pandoc' },
-		lazy = false
 	},
 	{
 		"lervag/vimtex",

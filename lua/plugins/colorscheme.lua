@@ -1,6 +1,7 @@
 return {
 	{
-		"EdenEast/nightfox.nvim"
+		"EdenEast/nightfox.nvim",
+		lazy = true, -- loaded on :colorscheme
 	},
 	{
 		"metalelf0/jellybeans-nvim",
