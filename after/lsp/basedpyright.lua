@@ -15,27 +15,10 @@ local function set_python_path(command)
 	end
 end
 
+-- Overrides on top of nvim-lspconfig's lsp/basedpyright.lua.
+-- lspconfig's on_attach still uses the deprecated client.request() dot call;
+-- this replaces it. Drop this file once lspconfig switches to client:request().
 return {
-	cmd = { 'basedpyright-langserver', '--stdio' },
-	filetypes = { 'python' },
-	root_markers = {
-		'pyproject.toml',
-		'setup.py',
-		'setup.cfg',
-		'requirements.txt',
-		'Pipfile',
-		'pyrightconfig.json',
-		'.git',
-	},
-	settings = {
-		basedpyright = {
-			analysis = {
-				autoSearchPaths = true,
-				useLibraryCodeForTypes = true,
-				diagnosticMode = 'openFilesOnly',
-			},
-		},
-	},
 	on_attach = function(client, bufnr)
 		vim.api.nvim_buf_create_user_command(bufnr, 'LspPyrightOrganizeImports', function()
 			local params = {
