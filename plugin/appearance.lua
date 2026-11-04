@@ -31,7 +31,7 @@ opt.previewheight = 12
 opt.showcmd = false
 opt.listchars = 'tab:░ ,extends:›,precedes:‹,nbsp:·,trail:·'
 opt.background = 'dark'
-opt.cmdheight = 2
+opt.cmdheight = 0 -- ui2 shows messages in a floating window instead
 opt.fillchars = {
 	diff = "╱", -- alternatives = ⣿ ░ ─ ╱
 	vert = "│",
