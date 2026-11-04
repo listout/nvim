@@ -2,16 +2,14 @@
 -- General Neovim settings and configuration
 -----------------------------------------------------------
 
-local g = vim.g     -- Global variables
 local opt = vim.opt -- Set options (global/buffer/windows-scoped)
-local cache_dir = os.getenv('HOME') .. '/.cache/nvim/'
 
 -----------------------------------------------------------
 -- General
 -----------------------------------------------------------
 opt.mouse = 'a'                               -- Enable mouse support
 opt.swapfile = false                          -- Don't use swapfile
-opt.completeopt = 'menuone,noinsert,noselect' -- Autocomplete options
+opt.completeopt = 'menuone,noselect,fuzzy,popup' -- Built-in completion (nvim-cmp has its own)
 opt.backup = false
 opt.writebackup = false
 opt.shell = 'zsh'
@@ -22,9 +20,8 @@ opt.wildignorecase = true
 opt.wildignore =
 '.git,.hg,.svn,*.pyc,*.o,*.out,*.jpg,*.jpeg,*.png,*.gif,*.zip,*.DS_Store,**/node_modules/**,**/bower_modules/**'
 opt.hlsearch = false -- No highlight search
-opt.ignorecase = true
 opt.exrc = true
-opt.signcolumn = 'yes' -- Display only when there is a sign to display
+opt.signcolumn = 'yes' -- Always show the sign column
 
 -----------------------------------------------------------
 -- Tabs, indent
@@ -33,8 +30,7 @@ opt.shiftwidth = 4     -- Shift 4 spaces when tab
 opt.tabstop = 4        -- 1 tab == 4 spaces
 opt.softtabstop = 4    -- 1 tab == 4 spaces
 opt.expandtab = false  -- Use spaces instead of tabs
-opt.smartindent = true -- Autoindent new lines
-opt.cindent = true     -- C programming indentation
+-- Indenting is left to filetype plugins / treesitter indentexpr.
 
 -----------------------------------------------------------
 -- Equal window sizes when resizing
@@ -54,7 +50,6 @@ opt.eadirection = "both"
 -----------------------------------------------------------
 -- Memory, CPU
 -----------------------------------------------------------
-opt.lazyredraw = true -- Faster scrolling
 opt.synmaxcol = 240   -- Max column for syntax highlight
 opt.updatetime = 300  -- ms to wait for trigger an event
 opt.timeoutlen = 500  -- ms to wait for a mapped sequence to complete.

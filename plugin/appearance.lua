@@ -9,14 +9,11 @@ opt.showmatch = true      -- Highlight matching parenthesis
 opt.foldmethod = 'marker' -- Enable folding (default 'foldmarker')
 opt.splitright = true     -- Vertical split to the right
 opt.splitbelow = true     -- Horizontal split to the bottom
-opt.ignorecase = true     -- Ignore case letters when search
 opt.smartcase = true      -- Ignore lowercase for the whole pattern
 opt.linebreak = true      -- Wrap on word boundary
 opt.termguicolors = true  -- Enable 24-bit RGB colors
-opt.laststatus = 2        -- Set global statusline
+opt.laststatus = 2        -- Statusline in every window (3 = global)
 opt.colorcolumn = "120"   -- Set global color column
-opt.splitbelow = true
-opt.splitright = true
 opt.scrolloff = 2
 opt.sidescrolloff = 5
 opt.foldlevelstart = 99
