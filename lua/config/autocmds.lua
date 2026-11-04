@@ -10,6 +10,14 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
+-- Highlight on put
+vim.api.nvim_create_autocmd("TextPutPost", {
+	group = augroup("highlight_put"),
+	callback = function()
+		vim.hl.hl_op()
+	end,
+})
+
 -- close some filetypes with <q>
 vim.api.nvim_create_autocmd("FileType", {
 	group = augroup("close_with_q"),
