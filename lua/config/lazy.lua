@@ -26,4 +26,20 @@ require("lazy").setup({
   install = { colorscheme = { "jellybeans-nvim" } },
   -- automatically check for plugin updates
   checker = { enabled = false },
+  performance = {
+    rtp = {
+      -- Built-in plugins to skip (file names in $VIMRUNTIME/plugin/).
+      disabled_plugins = {
+        "gzip",
+        "matchit",
+        "netrwPlugin",
+        "rplugin",
+        "spellfile",
+        "tarPlugin",
+        "tutor",
+        "zip",
+        "zipPlugin",
+      },
+    },
+  },
 })
