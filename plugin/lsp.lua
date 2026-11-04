@@ -36,28 +36,16 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 local signs = { Error = "󰅚 ", Warn = " ", Hint = " ", Info = " " }
+local sev = vim.diagnostic.severity
 vim.diagnostic.config({
 	signs = {
-		enable = true,
 		text = {
-			["ERROR"] = signs.Error,
-			["WARN"] = signs.Warn,
-			["HINT"] = signs.Hint,
-			["INFO"] = signs.Info,
+			[sev.ERROR] = signs.Error,
+			[sev.WARN] = signs.Warn,
+			[sev.HINT] = signs.Hint,
+			[sev.INFO] = signs.Info,
 		},
-		texthl = {
-			["ERROR"] = "DiagnosticDefault",
-			["WARN"] = "DiagnosticDefault",
-			["HINT"] = "DiagnosticDefault",
-			["INFO"] = "DiagnosticDefault",
-		},
-		numhl = {
-			["ERROR"] = "DiagnosticDefault",
-			["WARN"] = "DiagnosticDefault",
-			["HINT"] = "DiagnosticDefault",
-			["INFO"] = "DiagnosticDefault",
-		},
-	}
+	},
 })
 
 -- vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})

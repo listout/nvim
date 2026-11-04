@@ -52,25 +52,16 @@ keymap("s", "<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
--- vim.keymap.set('n', '[d', vim.diagnostic.jump({count=1, float=true}))
--- vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
--- vim.diagnostic.config({ jump = { float = true }})
-vim.keymap.set('n', '[d', function()
-	vim.diagnostic.jump({
-		count = -1,
-		float = {
-			border = "rounded",
-			source = "always",
-		},
-	})
-end)
-vim.keymap.set('n', ']d', function()
-	vim.diagnostic.jump({
-		count = 1,
-		float = {
-			border = "rounded",
-			source = "always",
-		},
-	})
-end)
+-- [d / ]d are default mappings; make them open a float after jumping.
+-- (Border comes from 'winborder'.)
+vim.diagnostic.config({
+	jump = {
+		on_jump = function(diagnostic, bufnr)
+			if not diagnostic then
+				return
+			end
+			vim.diagnostic.open_float({ bufnr = bufnr, scope = "cursor", focus = false, source = true })
+		end,
+	},
+})
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
