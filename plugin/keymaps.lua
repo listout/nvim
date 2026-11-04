@@ -27,12 +27,12 @@ map('n', '<leader>r', ':so %<CR>')
 map('n', '<leader>tk', '<C-w>t<C-w>K') -- change vertical to horizontal
 map('n', '<leader>th', '<C-w>t<C-w>H') -- change horizontal to vertical
 
-map('n', 'M-j', ':resize -2<CR>')
-map('n', 'M-k', ':resize +2<CR>')
-map('n', 'M-l', ':vertical resize -2<CR>')
-map('n', 'M-h', ':vertical resize +2<CR>')
+map('n', '<M-j>', ':resize -2<CR>')
+map('n', '<M-k>', ':resize +2<CR>')
+map('n', '<M-l>', ':vertical resize -2<CR>')
+map('n', '<M-h>', ':vertical resize +2<CR>')
 
-map('t', 'C-w', '<C-\\><C-n><C-w>')
+map('t', '<C-w>', '<C-\\><C-n><C-w>')
 
 map('n', '<leader>B', ':Buffers<CR>') -- FZF show open buffers
 map('n', '<leader>F', ':Files<CR>')   -- FZF show files
