@@ -44,10 +44,17 @@ opt.fillchars = {
 }
 opt.winborder = "rounded" -- Defines the default border style of floating windows
 
-vim.cmd [[
-	" Function, identifier and comments in italic
-	highlight Function cterm=italic gui=italic
-	highlight Indentifier cterm=none gui=italic
-	highlight Comment cterm=italic gui=italic
-]]
-vim.cmd [[ "syntax sync fromstart" ]]
+-- Function, identifier and comments in italic.
+-- Re-applied on every :colorscheme, since colorschemes reset highlights.
+local function italic_overrides()
+	vim.cmd [[
+		highlight Function cterm=italic gui=italic
+		highlight Identifier cterm=none gui=italic
+		highlight Comment cterm=italic gui=italic
+	]]
+end
+vim.api.nvim_create_autocmd("ColorScheme", {
+	group = vim.api.nvim_create_augroup("user_italic_overrides", { clear = true }),
+	callback = italic_overrides,
+})
+italic_overrides()
