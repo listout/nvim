@@ -2,13 +2,6 @@
 -- Mainly filetype settings
 --
 
-local cmd = vim.cmd
-
--- Autoremove unwanted whitespaces
-cmd [[
-	au BufRead,BufNewFile *mutt-* setfiletype mail
-]]
-
 vim.filetype.add {
 	extension = {
 		h = "c",
