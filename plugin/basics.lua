@@ -12,22 +12,17 @@ local cache_dir = os.getenv('HOME') .. '/.cache/nvim/'
 opt.mouse = 'a'                               -- Enable mouse support
 opt.swapfile = false                          -- Don't use swapfile
 opt.completeopt = 'menuone,noinsert,noselect' -- Autocomplete options
-opt.history = 500                             -- Lines vim should remember
 opt.backup = false
 opt.writebackup = false
 opt.shell = 'zsh'
-opt.magic = true                 -- Vim's regular expression magic
 opt.mat = 2                      -- How many tenths of seconds ro blink
 opt.fileformats = 'unix,mac,dos' -- Unix as standard file format
-opt.encoding = 'utf-8'           -- Encoding
 opt.viewoptions = 'folds,cursor,curdir,slash,unix'
 opt.wildignorecase = true
 opt.wildignore =
 '.git,.hg,.svn,*.pyc,*.o,*.out,*.jpg,*.jpeg,*.png,*.gif,*.zip,*.DS_Store,**/node_modules/**,**/bower_modules/**'
 opt.hlsearch = false -- No highlight search
-opt.incsearch = true
 opt.ignorecase = true
-opt.backspace = 'indent,eol,start'
 opt.exrc = true
 opt.signcolumn = 'yes' -- Display only when there is a sign to display
 
@@ -39,7 +34,6 @@ opt.tabstop = 4        -- 1 tab == 4 spaces
 opt.softtabstop = 4    -- 1 tab == 4 spaces
 opt.expandtab = false  -- Use spaces instead of tabs
 opt.smartindent = true -- Autoindent new lines
-opt.autoindent = true  -- Copy indent from current line when starting new line
 opt.cindent = true     -- C programming indentation
 
 -----------------------------------------------------------
@@ -60,7 +54,6 @@ opt.eadirection = "both"
 -----------------------------------------------------------
 -- Memory, CPU
 -----------------------------------------------------------
-opt.hidden = true     -- Enable background buffers
 opt.lazyredraw = true -- Faster scrolling
 opt.synmaxcol = 240   -- Max column for syntax highlight
 opt.updatetime = 300  -- ms to wait for trigger an event
