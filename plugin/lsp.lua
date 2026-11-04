@@ -35,7 +35,15 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 local signs = { Error = "󰅚 ", Warn = " ", Hint = " ", Info = " " }
 local sev = vim.diagnostic.severity
+-- All diagnostic settings live here ([d/]d float is in plugin/keymaps.lua).
 vim.diagnostic.config({
+	virtual_text = false,
+	underline = false,
+	update_in_insert = false, -- refresh on leaving insert mode, not every keystroke
+	severity_sort = false,
+	float = {
+		source = true,
+	},
 	signs = {
 		text = {
 			[sev.ERROR] = signs.Error,

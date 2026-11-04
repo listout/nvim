@@ -1,26 +1,27 @@
 return {
-	{ "hrsh7th/cmp-nvim-lsp" },
-	{ "hrsh7th/cmp-buffer" },
-	{ "hrsh7th/cmp-path" },
-	{ "hrsh7th/cmp-cmdline" },
-	{ "hrsh7th/cmp-nvim-lsp-signature-help" },
-	{ "hrsh7th/cmp-nvim-lua" },
-	{ "saadparwaiz1/cmp_luasnip" },
 	{
 		"L3MON4D3/LuaSnip",
 		version = "v2.*",
-		event = "InsertEnter",
+		lazy = true,
 		build = "make install_jsregexp",
 		dependencies = { "rafamadriz/friendly-snippets" },
 	},
 	{
-		"petertriho/cmp-git",
-		dependencies = "nvim-lua/plenary.nvim"
-	},
-	{ "micangl/cmp-vimtex" },
-	{ "onsails/lspkind.nvim" },
-	{
 		"hrsh7th/nvim-cmp",
+		event = { "InsertEnter", "CmdlineEnter" },
+		dependencies = {
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-path",
+			"hrsh7th/cmp-cmdline",
+			"hrsh7th/cmp-nvim-lsp-signature-help",
+			"saadparwaiz1/cmp_luasnip",
+			{ "petertriho/cmp-git", dependencies = "nvim-lua/plenary.nvim" },
+			"micangl/cmp-vimtex",
+			"onsails/lspkind.nvim",
+			"L3MON4D3/LuaSnip",
+			"windwp/nvim-autopairs",
+		},
 		config = function()
 			-- luasnip setup
 			local luasnip = require 'luasnip'
@@ -42,13 +43,6 @@ return {
 						},
 						ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
 						show_labelDetails = true, -- show labelDetails in menu. Disabled by default
-
-						-- The function below will be called before any actual modifications from lspkind
-						-- so that you can provide more controls on popup customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
-						before = function(entry, vim_item)
-							-- ...
-							return vim_item
-						end
 					})
 				},
 				snippet = {
@@ -98,6 +92,7 @@ return {
 					end, { "i", "s" }),
 				}),
 				sources = cmp.config.sources({
+					{ name = 'lazydev', group_index = 0 }, -- Neovim Lua API (lua files only)
 					{ name = 'nvim_lsp' },
 					{ name = 'vimtex' },
 					{ name = 'nvim_lsp_signature_help' },
@@ -111,7 +106,6 @@ return {
 					},
 					{ name = 'buffer' },
 					{ name = 'path' },
-					{ name = 'nvim_lua' },
 				}),
 			}
 
@@ -126,7 +120,7 @@ return {
 			require("cmp_git").setup()
 
 			-- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
-			require 'cmp'.setup.cmdline('/', {
+			cmp.setup.cmdline('/', {
 				completion = { autocomplete = false },
 				sources = {
 					-- { name = 'buffer' }
@@ -153,18 +147,7 @@ return {
 			)
 
 			-- lazy loading to get in memory snippets of languages you use
-			require("luasnip/loaders/from_vscode").lazy_load()
-
-			vim.diagnostic.config({
-				virtual_text = false,
-				signs = true,
-				underline = false,
-				update_in_insert = true,
-				severity_sort = false,
-				float = {
-					source = true,
-				},
-			})
+			require("luasnip.loaders.from_vscode").lazy_load()
 		end,
 	},
 }
