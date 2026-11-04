@@ -4,7 +4,6 @@ return {
 		event = "InsertEnter",
 		config = true
 	},
-	{ "preservim/nerdcommenter" },
 	{
 		"dhruvasagar/vim-table-mode",
 		ft = { 'markdown', 'markdown.pandoc', 'pandoc' }
