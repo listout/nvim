@@ -23,10 +23,9 @@ return {
 					if not lang or highlight_disable[lang] then
 						return
 					end
-					-- pcall: no parser available for this language
-					if pcall(vim.treesitter.start, ev.buf, lang) then
-						vim.bo[ev.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
-					end
+					-- pcall: no parser available for this language.
+					-- Indentation is left to Vim's filetype indent scripts.
+					pcall(vim.treesitter.start, ev.buf, lang)
 				end,
 			})
 		end,

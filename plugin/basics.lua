@@ -30,7 +30,8 @@ opt.shiftwidth = 4     -- Shift 4 spaces when tab
 opt.tabstop = 4        -- 1 tab == 4 spaces
 opt.softtabstop = 4    -- 1 tab == 4 spaces
 opt.expandtab = false  -- Use spaces instead of tabs
--- Indenting is left to filetype plugins / treesitter indentexpr.
+opt.smartindent = true -- Autoindent new lines
+opt.cindent = true     -- C programming indentation
 
 -----------------------------------------------------------
 -- Equal window sizes when resizing
